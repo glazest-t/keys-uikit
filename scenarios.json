@@ -1,0 +1,50 @@
+[
+  {
+    "id": "search",
+    "name": "Брони ещё нет",
+    "query": "scenario=search",
+    "description": "Подбор отеля, преимущества и приглашение друзей. Опросов о проживании нет."
+  },
+  {
+    "id": "booked-8",
+    "name": "За 8 дней",
+    "query": "scenario=booked&arrivalDay=day-8",
+    "description": "Подтверждённая бронь, оплата, документы, изменение брони, услуги."
+  },
+  {
+    "id": "booked-3",
+    "name": "За 3 дня",
+    "query": "scenario=booked&arrivalDay=day-3",
+    "description": "Добавлены онлайн-регистрация и инструкция по заселению."
+  },
+  {
+    "id": "arrival",
+    "name": "День заезда",
+    "query": "scenario=booked&arrivalDay=arrival",
+    "description": "Заезд сегодня; маршрут вместо изменения брони."
+  },
+  {
+    "id": "stay-1",
+    "name": "Проживание · день 1",
+    "query": "scenario=stay&stayDay=day-1",
+    "description": "Номер, ключ, депозит, завтрак, услуги, Wi-Fi, помощь и места рядом."
+  },
+  {
+    "id": "stay-2",
+    "name": "Проживание · день 2",
+    "query": "scenario=stay&stayDay=day-2",
+    "description": "То же проживание; в уведомлениях появился опрос первой ночи."
+  },
+  {
+    "id": "checkout",
+    "name": "День выезда",
+    "query": "scenario=stay&stayDay=checkout",
+    "description": "Выезд до 12:00, поздний выезд, остаток депозита; документы в деталях."
+  },
+  {
+    "id": "after",
+    "name": "Поездка завершена",
+    "query": "scenario=after",
+    "description": "Итоги, 2 240 баллов, документы, контакт, отзывы и приглашение друзей."
+  }
+]

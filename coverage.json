@@ -1,0 +1,836 @@
+{
+  "date": "2026-10-02",
+  "components": [
+    {
+      "id": "button",
+      "example": "examples/button.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css",
+      "states": [
+        "default",
+        "hover",
+        "pressed",
+        "focus-visible",
+        "disabled",
+        "loading"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "link",
+      "example": "examples/link.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "icon-button",
+      "example": "examples/icon-button.html",
+      "contract": true,
+      "source": "src/arbana/app-header.css",
+      "states": [
+        "default",
+        "pressed",
+        "focus-visible",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "field",
+      "example": "examples/field.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css",
+      "states": [
+        "empty",
+        "filled",
+        "focused",
+        "error",
+        "disabled",
+        "read-only"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "textarea",
+      "example": "examples/textarea.html",
+      "contract": true,
+      "source": "src/feedback/feedback.css",
+      "states": [
+        "empty",
+        "filled",
+        "focused",
+        "error",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "select",
+      "example": "examples/select.html",
+      "contract": true,
+      "source": "src/scenarios/before.css",
+      "states": [
+        "default",
+        "focused",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "checkbox",
+      "example": "examples/checkbox.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "unchecked",
+        "checked",
+        "disabled",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "radio",
+      "example": "examples/radio.html",
+      "contract": true,
+      "source": "src/scenarios/before.css",
+      "states": [
+        "unselected",
+        "selected",
+        "disabled",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "switch",
+      "example": "examples/switch.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "off",
+        "on",
+        "disabled",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "stepper",
+      "example": "examples/stepper.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "minimum",
+        "normal",
+        "maximum",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "tabs",
+      "example": "examples/tabs.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css; scripts/build-sections.mjs",
+      "states": [
+        "inactive",
+        "active",
+        "focus-visible",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "chips",
+      "example": "examples/chips.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "default",
+        "selected",
+        "disabled",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "calendar",
+      "example": "examples/calendar.html",
+      "contract": true,
+      "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+      "states": [
+        "empty",
+        "start-selected",
+        "range",
+        "unavailable",
+        "focused"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "uploader",
+      "example": "examples/uploader.html",
+      "contract": true,
+      "source": "src/feedback/feedback.js; src/sections/host.js",
+      "states": [
+        "empty",
+        "preview",
+        "uploading",
+        "error",
+        "complete"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "rating",
+      "example": "examples/rating.html",
+      "contract": true,
+      "source": "src/feedback/feedback.css",
+      "states": [
+        "empty",
+        "selected",
+        "focus-visible",
+        "disabled"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "header",
+      "example": "examples/header.html",
+      "contract": true,
+      "source": "src/arbana/app-header.js; src/arbana/app-header.css",
+      "states": [
+        "default",
+        "unread"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "subheader",
+      "example": "examples/subheader.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css; src/sections/host.js",
+      "states": [
+        "default",
+        "transitioning"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "bottom-nav",
+      "example": "examples/bottom-nav.html",
+      "contract": true,
+      "source": "src/arbana/app-nav.js; src/arbana/app-nav.css",
+      "states": [
+        "inactive",
+        "active",
+        "pressed",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "card",
+      "example": "examples/card.html",
+      "contract": true,
+      "source": "src/arbana/ui-standards.css",
+      "states": [
+        "default",
+        "hover",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "data-rows",
+      "example": "examples/data-rows.html",
+      "contract": true,
+      "source": "src/scenarios/before.css",
+      "states": [
+        "default",
+        "long-value",
+        "empty-value"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "status",
+      "example": "examples/status.html",
+      "contract": true,
+      "source": "src/booking/active-services.css; src/scenarios/before.css",
+      "states": [
+        "confirmed",
+        "paid",
+        "partial",
+        "requested",
+        "approved",
+        "progress",
+        "done",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "accordion",
+      "example": "examples/accordion.html",
+      "contract": true,
+      "source": "src/sections/host.css; src/booking/active-services.js",
+      "states": [
+        "collapsed",
+        "expanded",
+        "focus-visible"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "booking-hero",
+      "example": "examples/booking-hero.html",
+      "contract": true,
+      "source": "src/scenarios/before.js; src/scenarios/before.css",
+      "states": [
+        "8-days",
+        "3-days",
+        "arrival",
+        "fully-paid",
+        "partially-paid"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "stay-hero",
+      "example": "examples/stay-hero.html",
+      "contract": true,
+      "source": "src/home/home.js; src/scenarios/stay.js",
+      "states": [
+        "day-1",
+        "day-2",
+        "checkout",
+        "door-connecting",
+        "door-open",
+        "door-error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "completed-hero",
+      "example": "examples/completed-hero.html",
+      "contract": true,
+      "source": "src/scenarios/after.js; src/scenarios/after.css",
+      "states": [
+        "completed"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "search-empty",
+      "example": "examples/search-empty.html",
+      "contract": true,
+      "source": "src/scenarios/search.js; src/scenarios/search.css",
+      "states": [
+        "empty"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "service-row",
+      "example": "examples/service-row.html",
+      "contract": true,
+      "source": "src/arbana/service-cards.css; src/scenarios/before.css",
+      "states": [
+        "not-included",
+        "included",
+        "requested",
+        "added",
+        "approved"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "service-detail",
+      "example": "examples/service-detail.html",
+      "contract": true,
+      "source": "src/booking/services.js; src/booking/breakfast-gallery.js",
+      "states": [
+        "available",
+        "included",
+        "added",
+        "request-pending",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "orders",
+      "example": "examples/orders.html",
+      "contract": true,
+      "source": "src/booking/active-services.js; src/booking/active-services.css",
+      "states": [
+        "collapsed",
+        "expanded-active",
+        "expanded-completed",
+        "empty"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "bill",
+      "example": "examples/bill.html",
+      "contract": true,
+      "source": "src/booking/services.css; src/booking/services.js",
+      "states": [
+        "with-charges",
+        "empty",
+        "checkout"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "breakfast",
+      "example": "examples/breakfast.html",
+      "contract": true,
+      "source": "src/booking/breakfast-gallery.js; src/booking/services.js",
+      "states": [
+        "included",
+        "not-included",
+        "added"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "wifi",
+      "example": "examples/wifi.html",
+      "contract": true,
+      "source": "src/home/home.js",
+      "states": [
+        "hidden-password",
+        "revealed",
+        "copied"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "problem",
+      "example": "examples/problem.html",
+      "contract": true,
+      "source": "src/booking/services.js",
+      "states": [
+        "draft",
+        "sending",
+        "submitted",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "gallery",
+      "example": "examples/gallery.html",
+      "contract": true,
+      "source": "src/booking/breakfast-gallery.js; src/sections/hotel-details.js",
+      "states": [
+        "first",
+        "middle",
+        "last",
+        "full-screen",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "hotel-card",
+      "example": "examples/hotel-card.html",
+      "contract": true,
+      "source": "src/sections/find-results.js; src/sections/frame.css",
+      "states": [
+        "default",
+        "saved",
+        "no-discount",
+        "photo-error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "hotel-details",
+      "example": "examples/hotel-details.html",
+      "contract": true,
+      "source": "src/sections/hotel-details.js",
+      "states": [
+        "default",
+        "saved",
+        "price-tracked"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "room-card",
+      "example": "examples/room-card.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "available",
+        "selected",
+        "unavailable"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "search-form",
+      "example": "examples/search-form.html",
+      "contract": true,
+      "source": "src/sections/find-search.js; src/sections/frame.css",
+      "states": [
+        "empty",
+        "filled",
+        "invalid",
+        "loading"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "history",
+      "example": "examples/history.html",
+      "contract": true,
+      "source": "src/sections/find-recents.js",
+      "states": [
+        "two-examples",
+        "empty"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "photo-search",
+      "example": "examples/photo-search.html",
+      "contract": true,
+      "source": "src/sections/frame.css",
+      "states": [
+        "empty",
+        "uploaded",
+        "searching",
+        "results",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "collections",
+      "example": "examples/collections.html",
+      "contract": true,
+      "source": "src/sections/find-results.js",
+      "states": [
+        "default"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "nearby",
+      "example": "examples/nearby.html",
+      "contract": true,
+      "source": "src/home/nearby/nearby.js; src/home/nearby/nearby.css",
+      "states": [
+        "list",
+        "map",
+        "filtered",
+        "no-results"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "map",
+      "example": "examples/map.html",
+      "contract": true,
+      "source": "src/maps/2gis.js; src/sections/find-results.js",
+      "states": [
+        "collapsed",
+        "expanded",
+        "selected",
+        "loading",
+        "unavailable"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "reviews",
+      "example": "examples/reviews.html",
+      "contract": true,
+      "source": "src/sections/hotel-details.js",
+      "states": [
+        "summary",
+        "list",
+        "empty"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "payment",
+      "example": "examples/payment.html",
+      "contract": true,
+      "source": "src/sections/payment-booking-summary.js",
+      "states": [
+        "draft",
+        "validating",
+        "processing",
+        "success",
+        "failed"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "booking-documents",
+      "example": "examples/booking-documents.html",
+      "contract": true,
+      "source": "src/scenarios/before.js; src/scenarios/before.css",
+      "states": [
+        "confirmed",
+        "partial-payment",
+        "full-payment"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "document-picker",
+      "example": "examples/document-picker.html",
+      "contract": true,
+      "source": "src/scenarios/before.js; src/scenarios/after.js",
+      "states": [
+        "available",
+        "generating",
+        "failed"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "change-booking",
+      "example": "examples/change-booking.html",
+      "contract": true,
+      "source": "src/scenarios/booking-change.js",
+      "states": [
+        "edit",
+        "new-conditions",
+        "confirming",
+        "success",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "checkin",
+      "example": "examples/checkin.html",
+      "contract": true,
+      "source": "src/scenarios/booking-change.js; src/sections/frame.css",
+      "states": [
+        "step-1",
+        "step-2",
+        "submitting",
+        "completed",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "share",
+      "example": "examples/share.html",
+      "contract": true,
+      "source": "src/scenarios/before.js; src/sections/hotel-share.js",
+      "states": [
+        "read",
+        "manage",
+        "copied",
+        "native-share",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "route",
+      "example": "examples/route.html",
+      "contract": true,
+      "source": "src/scenarios/taxi-route.js",
+      "states": [
+        "chooser",
+        "external-preview",
+        "unavailable"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "loyalty",
+      "example": "examples/loyalty.html",
+      "contract": true,
+      "source": "src/sections/host.js; src/scenarios/after.js",
+      "states": [
+        "silver",
+        "progress",
+        "earned",
+        "spent",
+        "empty-history"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "referral",
+      "example": "examples/referral.html",
+      "contract": true,
+      "source": "src/scenarios/search.js; src/scenarios/after.js; src/sections/host.js",
+      "states": [
+        "default",
+        "shared",
+        "rewarded"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "profile",
+      "example": "examples/profile.html",
+      "contract": true,
+      "source": "src/sections/host.js; src/sections/host.css",
+      "states": [
+        "default",
+        "photo-selected",
+        "uploading",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "notifications",
+      "example": "examples/notifications.html",
+      "contract": true,
+      "source": "src/sections/notification-seed.js",
+      "states": [
+        "unread",
+        "read",
+        "empty"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "feedback",
+      "example": "examples/feedback.html",
+      "contract": true,
+      "source": "src/feedback/feedback.js; src/feedback/reviews.js",
+      "states": [
+        "rating",
+        "details",
+        "submitting",
+        "thanks",
+        "tips-if-5",
+        "error"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "chat",
+      "example": "examples/chat.html",
+      "contract": true,
+      "source": "vendor/arbana/source/assets/index-C4VobzN0.js; src/sections/frame.css",
+      "states": [
+        "list",
+        "unread",
+        "conversation",
+        "sending",
+        "failed",
+        "typing"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "sheet",
+      "example": "examples/sheet.html",
+      "contract": true,
+      "source": "src/sections/frame.css; src/booking/services.css",
+      "states": [
+        "opening",
+        "open",
+        "closing",
+        "submitting"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "toast",
+      "example": "examples/toast.html",
+      "contract": true,
+      "source": "src/arbana/tokens.css; src/sections/frame.css",
+      "states": [
+        "enter",
+        "visible",
+        "exit"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    },
+    {
+      "id": "empty-state",
+      "example": "examples/empty-state.html",
+      "contract": true,
+      "source": "src/sections/frame.css; src/arbana/ui-standards.css",
+      "states": [
+        "empty",
+        "error",
+        "loading",
+        "offline"
+      ],
+      "scope": "Representative portable composition. Full behavior and source preserved in reference-app/reference-source."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "search",
+      "name": "Брони ещё нет",
+      "query": "scenario=search",
+      "description": "Подбор отеля, преимущества и приглашение друзей. Опросов о проживании нет."
+    },
+    {
+      "id": "booked-8",
+      "name": "За 8 дней",
+      "query": "scenario=booked&arrivalDay=day-8",
+      "description": "Подтверждённая бронь, оплата, документы, изменение брони, услуги."
+    },
+    {
+      "id": "booked-3",
+      "name": "За 3 дня",
+      "query": "scenario=booked&arrivalDay=day-3",
+      "description": "Добавлены онлайн-регистрация и инструкция по заселению."
+    },
+    {
+      "id": "arrival",
+      "name": "День заезда",
+      "query": "scenario=booked&arrivalDay=arrival",
+      "description": "Заезд сегодня; маршрут вместо изменения брони."
+    },
+    {
+      "id": "stay-1",
+      "name": "Проживание · день 1",
+      "query": "scenario=stay&stayDay=day-1",
+      "description": "Номер, ключ, депозит, завтрак, услуги, Wi-Fi, помощь и места рядом."
+    },
+    {
+      "id": "stay-2",
+      "name": "Проживание · день 2",
+      "query": "scenario=stay&stayDay=day-2",
+      "description": "То же проживание; в уведомлениях появился опрос первой ночи."
+    },
+    {
+      "id": "checkout",
+      "name": "День выезда",
+      "query": "scenario=stay&stayDay=checkout",
+      "description": "Выезд до 12:00, поздний выезд, остаток депозита; документы в деталях."
+    },
+    {
+      "id": "after",
+      "name": "Поездка завершена",
+      "query": "scenario=after",
+      "description": "Итоги, 2 240 баллов, документы, контакт, отзывы и приглашение друзей."
+    }
+  ],
+  "icons": 85,
+  "sourceFiles": 63,
+  "styleRules": 4465,
+  "motionRecords": 167
+}

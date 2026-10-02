@@ -1,0 +1,14 @@
+UI kit Keys — 1.0.0
+
+Откройте index.html. Для живого прототипа и корректной работы браузерных API запустите:
+  python3 -m http.server 8780
+Затем откройте http://localhost:8780/
+
+Первый документ для разработчика: handoff.html
+Машинный контракт: manifest.json, components.json, contracts.d.ts
+Подключение: tokens.css → key.css → data.js → templates.js → key.js
+Снимок приложения: reference-app/index.html
+Исходные стили и логика: reference-source/
+Секреты и персональные пользовательские загрузки не включены.
+
+Данные, цены и начисления — примеры прототипа, не правила коммерческой программы.

@@ -1,0 +1,13 @@
+{
+  "hotel.jpg": "src/scenarios/maidens-hotel.jpg",
+  "next-trip.jpg": "src/scenarios/next-trip.jpg",
+  "avatar.jpg": "src/sections/profile-avatar.jpg",
+  "cafe.jpg": "src/home/nearby/nearby-cafe-generated.jpg",
+  "theatre.jpg": "src/home/nearby/theatre.jpg",
+  "restaurant.webp": "src/booking/restaurant.webp",
+  "breakfast.png": "src/booking/gallery/breakfast-dishes.png",
+  "buffet.png": "src/booking/gallery/breakfast-buffet.png",
+  "deals.svg": "src/sections/collections/deals.svg",
+  "weekend.svg": "src/sections/collections/weekend.svg",
+  "anywhere.svg": "src/sections/collections/anywhere.svg"
+}

@@ -1,0 +1,54 @@
+@font-face{font-family:Golos Text Variable;font-style:normal;font-display:swap;font-weight:400 900;src:url(./assets/golos-text-cyrillic-ext-wght-normal-hICkpzq7.woff2)format("woff2-variations");unicode-range:U+460-52F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}
+@font-face{font-family:Golos Text Variable;font-style:normal;font-display:swap;font-weight:400 900;src:url(./assets/golos-text-cyrillic-wght-normal-mKek_fSS.woff2)format("woff2-variations");unicode-range:U+301,U+400-45F,U+490-491,U+4B0-4B1,U+2116}
+@font-face{font-family:Golos Text Variable;font-style:normal;font-display:swap;font-weight:400 900;src:url(./assets/golos-text-latin-ext-wght-normal-B-I5lbAQ.woff2)format("woff2-variations");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Golos Text Variable;font-style:normal;font-display:swap;font-weight:400 900;src:url(./assets/golos-text-latin-wght-normal-BS5oQT7X.woff2)format("woff2-variations");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{color-scheme:light;--key-font:"Golos Text Variable",system-ui,sans-serif;
+--key-brand:#2c5deb;
+--key-brand-hover:#1f47b8;
+--key-text:#1c2841;
+--key-muted:#6c7790;
+--key-line:#e8ecf4;
+--key-surface:#f5f7fb;
+--key-card:#ffffff;
+--key-soft:#f0f4ff;
+--key-soft-hover:#e5edff;
+--key-positive:#32714f;
+--key-positive-surface:#edf5ef;
+--key-warning:#89612e;
+--key-warning-surface:#fff5ee;
+--key-danger:#b3473b;
+--key-ease-soft:cubic-bezier(.22,1,.36,1);--key-ease-ios:cubic-bezier(.32,.72,0,1);--key-ease-spring:cubic-bezier(.34,1.56,.64,1);
+--key-space4:4px;
+--key-space8:8px;
+--key-space12:12px;
+--key-space16:16px;
+--key-space20:20px;
+--key-space24:24px;
+--key-space32:32px;
+--key-radius-card:20px;
+--key-radius-button:14px;
+--key-radius-sheet:24px;
+--key-radius-item:10px;
+--key-control-height:48px;
+--key-link-height:44px;
+--key-tab-height:42px;
+--key-filter-height:40px;
+--key-service-action-height:36px;
+--key-icon-control:20px;
+--key-icon-row:22px;
+--key-icon-nav:24px;
+--key-icon-small:14px;
+--key-stroke:1.65px;
+--key-type-caption:400 12px/18px var(--key-font);
+--key-type-caption-medium:500 12px/18px var(--key-font);
+--key-type-body:400 14px/21px var(--key-font);
+--key-type-label:500 14px/21px var(--key-font);
+--key-type-field:400 16px/24px var(--key-font);
+--key-type-section:500 17px/24px var(--key-font);
+--key-type-title:500 20px/26px var(--key-font);
+--key-type-display:500 28px/34px var(--key-font);
+--key-type-navigation:500 12px/15px var(--key-font);
+--key-type-metric:500 24px/30px var(--key-font);
+--key-type-balance:500 36px/45px var(--key-font);
+}

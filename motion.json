@@ -1,0 +1,167 @@
+[
+  {
+    "id": "nav",
+    "name": "Капсула нижнего меню",
+    "duration": 380,
+    "easing": "cubic-bezier(.2,.8,.2,1)",
+    "property": "translateX: index × 100%",
+    "source": "src/arbana/app-nav.css",
+    "reduced": "Instant selection, no translation"
+  },
+  {
+    "id": "nav-icon",
+    "name": "Иконка выбранного раздела",
+    "duration": 420,
+    "easing": "cubic-bezier(.34,1.56,.64,1)",
+    "property": "0 → translateY(-2px) scale(1.14) → 0 at 0/30/100%",
+    "source": "src/arbana/app-nav.js",
+    "reduced": "No bounce"
+  },
+  {
+    "id": "press",
+    "name": "Нажатие / отпускание",
+    "duration": 80,
+    "releaseDuration": 220,
+    "easing": "cubic-bezier(.34,1.56,.64,1)",
+    "property": "scale 1 → .96 → 1",
+    "source": "src/arbana/app-nav.css",
+    "reduced": "Color only"
+  },
+  {
+    "id": "tabs",
+    "name": "Индикатор табов",
+    "duration": 300,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "property": "left + width follow measured active item",
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "reduced": "Instant selection"
+  },
+  {
+    "id": "profile-in",
+    "name": "Вложенный экран · вход",
+    "duration": 280,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "property": "translateX(40px) → 0; opacity 0 → 1",
+    "source": "src/sections/host.js",
+    "reduced": "Show immediately; preserve focus"
+  },
+  {
+    "id": "profile-out",
+    "name": "Вложенный экран · назад",
+    "duration": 160,
+    "easing": "cubic-bezier(.4,0,1,1)",
+    "property": "translateX(0) → 32px; opacity 1 → 0",
+    "source": "src/sections/host.js",
+    "reduced": "Restore origin immediately"
+  },
+  {
+    "id": "map",
+    "name": "Раскрытие карты",
+    "duration": 280,
+    "easing": "cubic-bezier(.2,.8,.2,1)",
+    "property": "height collapsed 176px → expanded; swipe up reverses",
+    "source": "src/sections/frame.css",
+    "reduced": "Immediate geometry change"
+  },
+  {
+    "id": "fade-in",
+    "name": "Появление",
+    "duration": 240,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "property": "opacity 0 → 1",
+    "source": "src/arbana/tokens.css",
+    "reduced": "No opacity animation"
+  },
+  {
+    "id": "fade-up",
+    "name": "Контент снизу",
+    "duration": 360,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "property": "opacity + translateY; see original keyframes inventory",
+    "source": "src/arbana/tokens.css",
+    "reduced": "Show immediately"
+  },
+  {
+    "id": "message",
+    "name": "Сообщение в чате",
+    "duration": 320,
+    "easing": "cubic-bezier(.22,1,.36,1)",
+    "property": "msg-in source keyframes",
+    "source": "src/arbana/tokens.css",
+    "reduced": "Insert without motion"
+  },
+  {
+    "id": "toast",
+    "name": "Toast · вход",
+    "duration": 340,
+    "easing": "cubic-bezier(.34,1.56,.64,1)",
+    "property": "toast-in source keyframes",
+    "source": "src/arbana/tokens.css",
+    "reduced": "Show + announce without movement"
+  },
+  {
+    "id": "toast-out",
+    "name": "Toast · выход",
+    "duration": 200,
+    "easing": "ease-in",
+    "property": "toast-out source keyframes",
+    "source": "src/arbana/tokens.css",
+    "reduced": "Remove immediately"
+  },
+  {
+    "id": "tab-content",
+    "name": "Смена содержимого",
+    "duration": 260,
+    "easing": "ease-out",
+    "property": "tab-content source keyframes",
+    "source": "src/arbana/tokens.css",
+    "reduced": "Swap immediately"
+  },
+  {
+    "id": "color",
+    "name": "Состояние элемента",
+    "duration": 180,
+    "easing": "ease",
+    "property": "color / background / border-color",
+    "source": "src/feedback/feedback.css; src/sections/frame.css",
+    "reduced": "Immediate color change"
+  },
+  {
+    "id": "sheet",
+    "name": "Нижняя панель",
+    "duration": 300,
+    "easing": "cubic-bezier(.32,.72,0,1)",
+    "property": "Translate from bottom; scrim opacity",
+    "source": "src/sections/frame.css",
+    "status": "kit-normalized",
+    "reduced": "Open and focus immediately"
+  },
+  {
+    "id": "postcards",
+    "name": "Открытки на пустой главной",
+    "duration": 550,
+    "secondaryDuration": 450,
+    "easing": "ease-out",
+    "property": "Sea: y12/rotate-3 → y0/rotate-9; city: y16/rotate3 → y0/rotate9",
+    "source": "src/scenarios/search.css",
+    "reduced": "Static composition"
+  },
+  {
+    "id": "external",
+    "name": "Переход в Яндекс Go",
+    "duration": 280,
+    "easing": "ease-out",
+    "property": "translateX(28px) → 0; opacity .5 → 1",
+    "source": "src/scenarios/taxi-route.js",
+    "reduced": "Instant external preview"
+  },
+  {
+    "id": "launch",
+    "name": "Ожидание внешнего приложения",
+    "duration": 700,
+    "easing": "ease-in-out",
+    "property": "opacity .35 ↔ 1, infinite alternate while waiting only",
+    "source": "src/scenarios/taxi-route.js",
+    "reduced": "Static waiting label"
+  }
+]

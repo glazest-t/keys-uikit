@@ -1,0 +1,192 @@
+[
+  {
+    "source": "src/prototype.html",
+    "name": "kdf-spin",
+    "css": "@keyframes kdf-spin{to{transform:rotate(360deg)}}"
+  },
+  {
+    "source": "src/prototype.html",
+    "name": "kdf-spin",
+    "css": "@keyframes kdf-spin{to{transform:rotate(360deg)}}"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "name": "kpaGoEnter",
+    "css": "@keyframes kpaGoEnter{from{opacity:.5;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "name": "kpaGoPulse",
+    "css": "@keyframes kpaGoPulse{to{opacity:.35}}"
+  },
+  {
+    "source": "src/scenarios/search.css",
+    "name": "kseSea",
+    "css": "@keyframes kseSea{from{opacity:0;transform:translateY(12px) rotate(-3deg)}to{opacity:1;transform:rotate(-9deg)}}"
+  },
+  {
+    "source": "src/scenarios/search.css",
+    "name": "kseCity",
+    "css": "@keyframes kseCity{from{opacity:0;transform:translateY(16px) rotate(3deg)}to{opacity:1;transform:rotate(9deg)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "guest-portal-key-float",
+    "css": "@keyframes guest-portal-key-float{0%,to{transform:translateY(2px)}50%{transform:translateY(-3px)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "guest-portal-key-sway",
+    "css": "@keyframes guest-portal-key-sway{0%,to{transform:rotate(30deg)}50%{transform:rotate(12deg)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "guest-portal-key-shadow",
+    "css": "@keyframes guest-portal-key-shadow{0%,to{transform:scaleX(1);opacity:.8}50%{transform:scaleX(.82);opacity:.5}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "guest-portal-key-sheen",
+    "css": "@keyframes guest-portal-key-sheen{0%,24%{transform:translate(0) skew(-24deg);opacity:0}32%{opacity:.8}65%,to{transform:translate(65px) skew(-24deg);opacity:0}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "tms-jelly-a",
+    "css": "@keyframes tms-jelly-a{0%{scale:1}35%{scale:1.16 .86}to{scale:1}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "tms-jelly-b",
+    "css": "@keyframes tms-jelly-b{0%{scale:1}35%{scale:1.16 .86}to{scale:1}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "backdrop-in",
+    "css": "@keyframes backdrop-in{0%{opacity:0}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "sheet-up",
+    "css": "@keyframes sheet-up{0%{transform:translateY(100%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "modal-in",
+    "css": "@keyframes modal-in{0%{opacity:0;transform:translateY(12px)scale(.97)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "gallery-in",
+    "css": "@keyframes gallery-in{0%{opacity:0;transform:scale(.94)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "select-in",
+    "css": "@keyframes select-in{0%{opacity:0;transform:translateY(-4px)scale(.97)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "select-in-up",
+    "css": "@keyframes select-in-up{0%{opacity:0;transform:translateY(4px)scale(.97)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "story-progress",
+    "css": "@keyframes story-progress{0%{transform:scaleX(0)}to{transform:scaleX(1)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "typing-dot",
+    "css": "@keyframes typing-dot{0%,60%,to{opacity:.35;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-opacity-in",
+    "css": "@keyframes vt-opacity-in{0%{opacity:0}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-sheet-in",
+    "css": "@keyframes vt-sheet-in{0%{transform:translate(100%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-sheet-out",
+    "css": "@keyframes vt-sheet-out{to{transform:translate(100%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-modal-out",
+    "css": "@keyframes vt-modal-out{to{opacity:0;transform:scale(.96)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-push-old",
+    "css": "@keyframes vt-push-old{to{filter:brightness(.94);transform:translate(-28%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-push-new",
+    "css": "@keyframes vt-push-new{0%{transform:translate(100%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-pop-old",
+    "css": "@keyframes vt-pop-old{to{transform:translate(100%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-pop-new",
+    "css": "@keyframes vt-pop-new{0%{filter:brightness(.94);transform:translate(-28%)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-fade-out",
+    "css": "@keyframes vt-fade-out{to{opacity:0}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "vt-fade-in",
+    "css": "@keyframes vt-fade-in{0%{opacity:0;transform:translateY(8px)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "spin",
+    "css": "@keyframes spin{to{transform:rotate(360deg)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "fade-in",
+    "css": "@keyframes fade-in{0%{opacity:0}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "fade-up",
+    "css": "@keyframes fade-up{0%{opacity:0;transform:translateY(10px)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "msg-in",
+    "css": "@keyframes msg-in{0%{opacity:0;transform:translateY(12px)scale(.97)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "tab-pop",
+    "css": "@keyframes tab-pop{30%{transform:translateY(-2px)scale(1.14)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "toast-in",
+    "css": "@keyframes toast-in{0%{opacity:0;transform:translateY(16px)scale(.96)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "toast-out",
+    "css": "@keyframes toast-out{to{opacity:0;transform:translateY(10px)scale(.98)}}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "name": "tab-content",
+    "css": "@keyframes tab-content{0%{opacity:0}}"
+  }
+]

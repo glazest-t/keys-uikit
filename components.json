@@ -1,0 +1,1582 @@
+[
+  {
+    "id": "button",
+    "name": "Кнопки",
+    "group": "controls",
+    "source": "src/arbana/ui-standards.css",
+    "props": [
+      "variant: primary | secondary | danger | quiet",
+      "disabled: boolean",
+      "loading: boolean",
+      "label: string"
+    ],
+    "states": [
+      "default",
+      "hover",
+      "pressed",
+      "focus-visible",
+      "disabled",
+      "loading"
+    ],
+    "events": [
+      "click"
+    ],
+    "rules": [
+      "48 px minimum; radius 14; label 14/21/500.",
+      "One primary per task. A loading action keeps its width and accessible label; prevent duplicate submit."
+    ],
+    "implementation": "examples/button.html"
+  },
+  {
+    "id": "link",
+    "name": "Ссылки и действия строки",
+    "group": "controls",
+    "source": "src/arbana/ui-standards.css",
+    "props": [
+      "variant: footer | inline | service",
+      "label: string",
+      "href?: URL"
+    ],
+    "states": [
+      "default",
+      "hover",
+      "focus-visible",
+      "disabled"
+    ],
+    "events": [
+      "navigate",
+      "activate"
+    ],
+    "rules": [
+      "Footer 44 px, 12/18/500; service action 36 px, radius 10.",
+      "Compact action is part of a clickable row; never nest a button inside a button."
+    ],
+    "implementation": "examples/link.html"
+  },
+  {
+    "id": "icon-button",
+    "name": "Кнопка с иконкой",
+    "group": "controls",
+    "source": "src/arbana/app-header.css",
+    "props": [
+      "icon: IconName",
+      "label: string",
+      "pressed?: boolean",
+      "badge?: number"
+    ],
+    "states": [
+      "default",
+      "pressed",
+      "focus-visible",
+      "disabled"
+    ],
+    "events": [
+      "click"
+    ],
+    "rules": [
+      "44 × 44 touch target; 20–22 px glyph; explicit aria-label.",
+      "A control surface is allowed; a decorative icon tile is not."
+    ],
+    "implementation": "examples/icon-button.html"
+  },
+  {
+    "id": "field",
+    "name": "Поля ввода",
+    "group": "forms",
+    "source": "src/arbana/ui-standards.css",
+    "props": [
+      "label: string",
+      "value: string",
+      "type: text | email | tel | date",
+      "error?: string",
+      "hint?: string",
+      "required?: boolean"
+    ],
+    "states": [
+      "empty",
+      "filled",
+      "focused",
+      "error",
+      "disabled",
+      "read-only"
+    ],
+    "events": [
+      "input",
+      "change",
+      "blur"
+    ],
+    "rules": [
+      "16/24/400 input; label 14/21/500; hint 12/18.",
+      "Use label/for and aria-describedby; do not use placeholder as label.",
+      "Error is text + color, not color alone."
+    ],
+    "implementation": "examples/field.html"
+  },
+  {
+    "id": "textarea",
+    "name": "Многострочный ввод",
+    "group": "forms",
+    "source": "src/feedback/feedback.css",
+    "props": [
+      "label: string",
+      "value: string",
+      "maxLength?: number"
+    ],
+    "states": [
+      "empty",
+      "filled",
+      "focused",
+      "error",
+      "disabled"
+    ],
+    "events": [
+      "input"
+    ],
+    "rules": [
+      "Same field tokens. Resize vertically; preserve draft on Back."
+    ],
+    "implementation": "examples/textarea.html"
+  },
+  {
+    "id": "select",
+    "name": "Выбор значения",
+    "group": "forms",
+    "source": "src/scenarios/before.css",
+    "props": [
+      "label: string",
+      "options: {value,label}[]",
+      "value: string"
+    ],
+    "states": [
+      "default",
+      "focused",
+      "disabled"
+    ],
+    "events": [
+      "change"
+    ],
+    "rules": [
+      "Native select with standard outline chevron; 20 px icon, 12 px trailing inset, vertically centred.",
+      "Reserve 44 px at the end of the field so the value cannot overlap the icon; minimum height 48 px, radius 14, field text 16/24.",
+      "The icon is decorative and ignores pointer events; the full field opens the native picker."
+    ],
+    "implementation": "examples/select.html"
+  },
+  {
+    "id": "checkbox",
+    "name": "Чекбокс",
+    "group": "forms",
+    "source": "src/sections/frame.css",
+    "props": [
+      "checked: boolean",
+      "label: string",
+      "disabled?: boolean"
+    ],
+    "states": [
+      "unchecked",
+      "checked",
+      "disabled",
+      "focus-visible"
+    ],
+    "events": [
+      "change"
+    ],
+    "rules": [
+      "Multiple independent values; native checkbox. 44 px label hit area."
+    ],
+    "implementation": "examples/checkbox.html"
+  },
+  {
+    "id": "radio",
+    "name": "Радиокнопки",
+    "group": "forms",
+    "source": "src/scenarios/before.css",
+    "props": [
+      "name: string",
+      "options: Option[]",
+      "value: string"
+    ],
+    "states": [
+      "unselected",
+      "selected",
+      "disabled",
+      "focus-visible"
+    ],
+    "events": [
+      "change"
+    ],
+    "rules": [
+      "Exactly one selection in a group. Native radio keyboard behavior."
+    ],
+    "implementation": "examples/radio.html"
+  },
+  {
+    "id": "switch",
+    "name": "Переключатель настройки",
+    "group": "forms",
+    "source": "src/sections/frame.css",
+    "props": [
+      "checked: boolean",
+      "label: string",
+      "disabled?: boolean"
+    ],
+    "states": [
+      "off",
+      "on",
+      "disabled",
+      "focus-visible"
+    ],
+    "events": [
+      "change"
+    ],
+    "rules": [
+      "Use for a setting, not navigation. Accessible name stays unchanged."
+    ],
+    "implementation": "examples/switch.html"
+  },
+  {
+    "id": "stepper",
+    "name": "Количество гостей",
+    "group": "forms",
+    "source": "src/sections/frame.css",
+    "props": [
+      "value: number",
+      "min: number",
+      "max: number",
+      "label: string"
+    ],
+    "states": [
+      "minimum",
+      "normal",
+      "maximum",
+      "disabled"
+    ],
+    "events": [
+      "change(value)"
+    ],
+    "rules": [
+      "44 px −/+ targets, disabled at bounds. Announce quantity."
+    ],
+    "implementation": "examples/stepper.html"
+  },
+  {
+    "id": "tabs",
+    "name": "Табы и сегменты",
+    "group": "navigation",
+    "source": "src/arbana/ui-standards.css; scripts/build-sections.mjs",
+    "props": [
+      "variant: pill | line",
+      "items: {id,label}[]",
+      "selected: string"
+    ],
+    "states": [
+      "inactive",
+      "active",
+      "focus-visible",
+      "disabled"
+    ],
+    "events": [
+      "select(id)"
+    ],
+    "rules": [
+      "Always 14/21/500 in every state; no bold active label.",
+      "Track padding 4, radius 14; item minimum 42, radius 10.",
+      "Arrow keys + Home/End; roving tabindex; associated tabpanel."
+    ],
+    "implementation": "examples/tabs.html"
+  },
+  {
+    "id": "chips",
+    "name": "Фильтры",
+    "group": "controls",
+    "source": "src/sections/frame.css",
+    "props": [
+      "options: Option[]",
+      "selected: string[]",
+      "multiple: boolean"
+    ],
+    "states": [
+      "default",
+      "selected",
+      "disabled",
+      "focus-visible"
+    ],
+    "events": [
+      "toggle(id)"
+    ],
+    "rules": [
+      "40 px minimum, pill shape. aria-pressed for independent chips.",
+      "All-filters icon requires accessible name and selected-count label."
+    ],
+    "implementation": "examples/chips.html"
+  },
+  {
+    "id": "calendar",
+    "name": "Календарь дат",
+    "group": "forms",
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "props": [
+      "start?: ISODate",
+      "end?: ISODate",
+      "minDate: ISODate",
+      "availability: DateAvailability[]"
+    ],
+    "states": [
+      "empty",
+      "start-selected",
+      "range",
+      "unavailable",
+      "focused"
+    ],
+    "events": [
+      "rangeChange",
+      "confirm"
+    ],
+    "rules": [
+      "Keep start/end visible; disabled dates cannot be picked.",
+      "Use actual calendar arithmetic and localization, not the fixed demo month."
+    ],
+    "implementation": "examples/calendar.html"
+  },
+  {
+    "id": "uploader",
+    "name": "Фото и документы",
+    "group": "forms",
+    "source": "src/feedback/feedback.js; src/sections/host.js",
+    "props": [
+      "accept: string",
+      "multiple: boolean",
+      "files: Upload[]",
+      "maxCount: number"
+    ],
+    "states": [
+      "empty",
+      "preview",
+      "uploading",
+      "error",
+      "complete"
+    ],
+    "events": [
+      "select(files)",
+      "remove(id)",
+      "retry(id)"
+    ],
+    "rules": [
+      "Native file input with visible trigger. Show preview/name and remove action.",
+      "Validate size/type in the product; prototype local preview is not storage."
+    ],
+    "implementation": "examples/uploader.html"
+  },
+  {
+    "id": "rating",
+    "name": "Оценка звёздами",
+    "group": "forms",
+    "source": "src/feedback/feedback.css",
+    "props": [
+      "value: 0 | 1 | 2 | 3 | 4 | 5",
+      "label: string"
+    ],
+    "states": [
+      "empty",
+      "selected",
+      "focus-visible",
+      "disabled"
+    ],
+    "events": [
+      "rate(value)"
+    ],
+    "rules": [
+      "Friendly green selected stars; numeric accessible label.",
+      "Tips become available only after a submitted 5-star review."
+    ],
+    "implementation": "examples/rating.html"
+  },
+  {
+    "id": "header",
+    "name": "Шапка основного раздела",
+    "group": "navigation",
+    "source": "src/arbana/app-header.js; src/arbana/app-header.css",
+    "props": [
+      "unread: boolean",
+      "avatarUrl: URL"
+    ],
+    "states": [
+      "default",
+      "unread"
+    ],
+    "events": [
+      "openNotifications",
+      "openProfile"
+    ],
+    "rules": [
+      "Compact wordmark 24/600; original right actions retained.",
+      "Same avatar in all roots; preserve origin for back navigation."
+    ],
+    "implementation": "examples/header.html"
+  },
+  {
+    "id": "subheader",
+    "name": "Шапка вложенного экрана",
+    "group": "navigation",
+    "source": "src/arbana/ui-standards.css; src/sections/host.js",
+    "props": [
+      "title: string",
+      "backTo: Route",
+      "action?: Action"
+    ],
+    "states": [
+      "default",
+      "transitioning"
+    ],
+    "events": [
+      "back",
+      "action"
+    ],
+    "rules": [
+      "20/26/500 title, 44 px back button; no repeated hotel subtitle.",
+      "Back restores exact originating screen, filters and scroll."
+    ],
+    "implementation": "examples/subheader.html"
+  },
+  {
+    "id": "bottom-nav",
+    "name": "Нижнее меню",
+    "group": "navigation",
+    "source": "src/arbana/app-nav.js; src/arbana/app-nav.css",
+    "props": [
+      "active: trips | search | chats | benefits",
+      "unreadChats: boolean"
+    ],
+    "states": [
+      "inactive",
+      "active",
+      "pressed",
+      "focus-visible"
+    ],
+    "events": [
+      "navigate(tab)"
+    ],
+    "rules": [
+      "Four equal items; 58 px track, 50 px item, 24 px icon, 12/15/500 label.",
+      "Glass track and moving white cap; no special accent on Chats.",
+      "Bottom safe area + content padding 88 px; omit on secondary screens."
+    ],
+    "implementation": "examples/bottom-nav.html"
+  },
+  {
+    "id": "card",
+    "name": "Базовая карточка",
+    "group": "surfaces",
+    "source": "src/arbana/ui-standards.css",
+    "props": [
+      "variant: white | soft | positive | brand",
+      "interactive: boolean"
+    ],
+    "states": [
+      "default",
+      "hover",
+      "focus-visible"
+    ],
+    "events": [
+      "activate?"
+    ],
+    "rules": [
+      "Radius 20, padding 16, gap 12–16, line border.",
+      "One visual group; no redundant nested bordered cards."
+    ],
+    "implementation": "examples/card.html"
+  },
+  {
+    "id": "data-rows",
+    "name": "Информационные строки",
+    "group": "surfaces",
+    "source": "src/scenarios/before.css",
+    "props": [
+      "rows: {label,value,hint?}[]"
+    ],
+    "states": [
+      "default",
+      "long-value",
+      "empty-value"
+    ],
+    "events": [],
+    "rules": [
+      "14/21 text; muted label left, primary value right.",
+      "Status sits by related heading/value; services show name left and inclusion right."
+    ],
+    "implementation": "examples/data-rows.html"
+  },
+  {
+    "id": "status",
+    "name": "Статусы",
+    "group": "surfaces",
+    "source": "src/booking/active-services.css; src/scenarios/before.css",
+    "props": [
+      "tone: positive | information | warning | negative | neutral",
+      "label: string",
+      "icon?: IconName"
+    ],
+    "states": [
+      "confirmed",
+      "paid",
+      "partial",
+      "requested",
+      "approved",
+      "progress",
+      "done",
+      "error"
+    ],
+    "events": [],
+    "rules": [
+      "12/18/500; short label and optional check.",
+      "Rating and discount use different colors and semantics."
+    ],
+    "implementation": "examples/status.html"
+  },
+  {
+    "id": "accordion",
+    "name": "Раскрывающийся блок",
+    "group": "surfaces",
+    "source": "src/sections/host.css; src/booking/active-services.js",
+    "props": [
+      "title: string",
+      "summary?: string",
+      "open: boolean"
+    ],
+    "states": [
+      "collapsed",
+      "expanded",
+      "focus-visible"
+    ],
+    "events": [
+      "toggle(open)"
+    ],
+    "rules": [
+      "Summary conveys essential data while closed.",
+      "Booking documents remain fully expanded; accordions belong to benefits/orders."
+    ],
+    "implementation": "examples/accordion.html"
+  },
+  {
+    "id": "booking-hero",
+    "name": "Бронирование до заезда",
+    "group": "travel",
+    "source": "src/scenarios/before.js; src/scenarios/before.css",
+    "props": [
+      "arrivalDay: day-8 | day-3 | arrival",
+      "hotel: Hotel",
+      "booking: Booking",
+      "payment: Payment"
+    ],
+    "states": [
+      "8-days",
+      "3-days",
+      "arrival",
+      "fully-paid",
+      "partially-paid"
+    ],
+    "events": [
+      "share",
+      "openBooking"
+    ],
+    "rules": [
+      "Light blue welcome strip above photo; blue information area.",
+      "Arrival countdown, dates + times, nights, room, guests, payment.",
+      "Arrival day shows “Заезд сегодня”; online check-in from 3 days before."
+    ],
+    "implementation": "examples/booking-hero.html"
+  },
+  {
+    "id": "stay-hero",
+    "name": "Проживание и цифровой ключ",
+    "group": "travel",
+    "source": "src/home/home.js; src/scenarios/stay.js",
+    "props": [
+      "hotel: Hotel",
+      "room: Room",
+      "day: number",
+      "totalDays: number",
+      "checkoutAt: DateTime"
+    ],
+    "states": [
+      "day-1",
+      "day-2",
+      "checkout",
+      "door-connecting",
+      "door-open",
+      "door-error"
+    ],
+    "events": [
+      "bookingDetails",
+      "openDoor"
+    ],
+    "rules": [
+      "Light blue hotel/status strip above blue area.",
+      "Room, floor, current day/total and checkout time immediately visible.",
+      "Checkout day: strong “Сегодня до 12:00”; no “Ключ активен” filler."
+    ],
+    "implementation": "examples/stay-hero.html"
+  },
+  {
+    "id": "completed-hero",
+    "name": "Завершённая поездка",
+    "group": "travel",
+    "source": "src/scenarios/after.js; src/scenarios/after.css",
+    "props": [
+      "hotel: Hotel",
+      "booking: Booking"
+    ],
+    "states": [
+      "completed"
+    ],
+    "events": [
+      "stayDetails"
+    ],
+    "rules": [
+      "Same visual family: light header + photo + blue summary.",
+      "City, dates, nights and completion status; no service management."
+    ],
+    "implementation": "examples/completed-hero.html"
+  },
+  {
+    "id": "search-empty",
+    "name": "Поездок пока нет",
+    "group": "travel",
+    "source": "src/scenarios/search.js; src/scenarios/search.css",
+    "props": [
+      "hasUpcoming: false"
+    ],
+    "states": [
+      "empty"
+    ],
+    "events": [
+      "findHotel",
+      "inviteFriend",
+      "benefits"
+    ],
+    "rules": [
+      "Inspiration, hotel discovery, referral and direct-price benefits.",
+      "No stay review notification in the no-booking scenario."
+    ],
+    "implementation": "examples/search-empty.html"
+  },
+  {
+    "id": "service-row",
+    "name": "Добавить к поездке",
+    "group": "services",
+    "source": "src/arbana/service-cards.css; src/scenarios/before.css",
+    "props": [
+      "service: Service",
+      "status: ServiceStatus",
+      "included: boolean",
+      "price?: Money"
+    ],
+    "states": [
+      "not-included",
+      "included",
+      "requested",
+      "added",
+      "approved"
+    ],
+    "events": [
+      "add",
+      "edit"
+    ],
+    "rules": [
+      "Plain 22 px icon in a 24 px slot; row minimum 76.",
+      "Consistent compact actions: Добавить / Изменить.",
+      "Added paid breakfast explicitly says added for an extra charge."
+    ],
+    "implementation": "examples/service-row.html"
+  },
+  {
+    "id": "service-detail",
+    "name": "Страница услуги",
+    "group": "services",
+    "source": "src/booking/services.js; src/booking/breakfast-gallery.js",
+    "props": [
+      "service: Service",
+      "origin: Route",
+      "status: ServiceStatus"
+    ],
+    "states": [
+      "available",
+      "included",
+      "added",
+      "request-pending",
+      "error"
+    ],
+    "events": [
+      "add",
+      "remove",
+      "change",
+      "back"
+    ],
+    "rules": [
+      "Add/remove returns to origin with toast.",
+      "Added service has one action; no redundant Готово.",
+      "Early and late checkout share the selection/submit/remove pattern."
+    ],
+    "implementation": "examples/service-detail.html"
+  },
+  {
+    "id": "orders",
+    "name": "Услуги и счёт",
+    "group": "services",
+    "source": "src/booking/active-services.js; src/booking/active-services.css",
+    "props": [
+      "orders: ServiceOrder[]",
+      "total: Money",
+      "expanded: boolean",
+      "tab: active | completed"
+    ],
+    "states": [
+      "collapsed",
+      "expanded-active",
+      "expanded-completed",
+      "empty"
+    ],
+    "events": [
+      "expand",
+      "selectTab",
+      "openOrder",
+      "openBill"
+    ],
+    "rules": [
+      "Collapsed: active count, nearest expected time and bill entry.",
+      "Each order shows status, administrator confirmation and fulfilment time.",
+      "Pending requests are not charged as completed services."
+    ],
+    "implementation": "examples/orders.html"
+  },
+  {
+    "id": "bill",
+    "name": "Текущий счёт",
+    "group": "services",
+    "source": "src/booking/services.css; src/booking/services.js",
+    "props": [
+      "deposit: Money",
+      "spent: Money",
+      "remaining: Money",
+      "items: BillItem[]"
+    ],
+    "states": [
+      "with-charges",
+      "empty",
+      "checkout"
+    ],
+    "events": [
+      "openCharge",
+      "documents"
+    ],
+    "rules": [
+      "Demo: deposited 10 000 ₽, spent 480 ₽, remaining 9 520 ₽.",
+      "Deposit summary uses modest hierarchy; detail balance may use 36/45."
+    ],
+    "implementation": "examples/bill.html"
+  },
+  {
+    "id": "breakfast",
+    "name": "Завтрак и питание",
+    "group": "services",
+    "source": "src/booking/breakfast-gallery.js; src/booking/services.js",
+    "props": [
+      "included: boolean",
+      "added: boolean",
+      "hours: TimeRange",
+      "location: string",
+      "images: Image[]"
+    ],
+    "states": [
+      "included",
+      "not-included",
+      "added"
+    ],
+    "events": [
+      "gallery",
+      "add",
+      "remove"
+    ],
+    "rules": [
+      "Gallery of restaurant, buffet and dishes; coffee icon.",
+      "Not included → Добавить услугу; added → Убрать завтрак."
+    ],
+    "implementation": "examples/breakfast.html"
+  },
+  {
+    "id": "wifi",
+    "name": "Wi-Fi",
+    "group": "services",
+    "source": "src/home/home.js",
+    "props": [
+      "network: string",
+      "password: string"
+    ],
+    "states": [
+      "hidden-password",
+      "revealed",
+      "copied"
+    ],
+    "events": [
+      "reveal",
+      "copy"
+    ],
+    "rules": [
+      "Details on demand; label copy buttons and announce success."
+    ],
+    "implementation": "examples/wifi.html"
+  },
+  {
+    "id": "problem",
+    "name": "Сообщить о проблеме",
+    "group": "services",
+    "source": "src/booking/services.js",
+    "props": [
+      "category: string",
+      "message: string",
+      "photos: Upload[]",
+      "urgent: boolean"
+    ],
+    "states": [
+      "draft",
+      "sending",
+      "submitted",
+      "error"
+    ],
+    "events": [
+      "submit",
+      "attach",
+      "back"
+    ],
+    "rules": [
+      "There is a dedicated problem screen, not a generic service form.",
+      "Keep draft on failures; identify request and confirmation after submit."
+    ],
+    "implementation": "examples/problem.html"
+  },
+  {
+    "id": "gallery",
+    "name": "Галерея",
+    "group": "discovery",
+    "source": "src/booking/breakfast-gallery.js; src/sections/hotel-details.js",
+    "props": [
+      "images: Image[]",
+      "index: number",
+      "alt: string"
+    ],
+    "states": [
+      "first",
+      "middle",
+      "last",
+      "full-screen",
+      "error"
+    ],
+    "events": [
+      "next",
+      "previous",
+      "open",
+      "close"
+    ],
+    "rules": [
+      "Wide landscape image, swipe + buttons, count indicator.",
+      "Preserve aspect ratio; image dimensions reserved before loading."
+    ],
+    "implementation": "examples/gallery.html"
+  },
+  {
+    "id": "hotel-card",
+    "name": "Карточка отеля",
+    "group": "discovery",
+    "source": "src/sections/find-results.js; src/sections/frame.css",
+    "props": [
+      "hotel: Hotel",
+      "price: Money",
+      "basePrice?: Money",
+      "discount?: number",
+      "saved: boolean"
+    ],
+    "states": [
+      "default",
+      "saved",
+      "no-discount",
+      "photo-error"
+    ],
+    "events": [
+      "openHotel",
+      "save",
+      "gallery"
+    ],
+    "rules": [
+      "Landscape gallery; entire information area opens details.",
+      "Price top right, base price and discount below; rating with review count.",
+      "City + distance to sea for resorts, otherwise to city centre."
+    ],
+    "implementation": "examples/hotel-card.html"
+  },
+  {
+    "id": "hotel-details",
+    "name": "Детали отеля",
+    "group": "discovery",
+    "source": "src/sections/hotel-details.js",
+    "props": [
+      "hotel: Hotel",
+      "discounts: Discount[]",
+      "minStayPrice: Money"
+    ],
+    "states": [
+      "default",
+      "saved",
+      "price-tracked"
+    ],
+    "events": [
+      "selectRoom",
+      "discountDetails",
+      "share",
+      "save",
+      "trackPrice"
+    ],
+    "rules": [
+      "Accommodation type + official stars separate from review score.",
+      "Full about text, small preference tags, gallery, reviews, location.",
+      "CTA Выбрать номер от …; nearest-date pricing omitted."
+    ],
+    "implementation": "examples/hotel-details.html"
+  },
+  {
+    "id": "room-card",
+    "name": "Номер и тариф",
+    "group": "discovery",
+    "source": "src/sections/frame.css",
+    "props": [
+      "room: Room",
+      "rate: Rate"
+    ],
+    "states": [
+      "available",
+      "selected",
+      "unavailable"
+    ],
+    "events": [
+      "selectRate",
+      "gallery"
+    ],
+    "rules": [
+      "Area appears in description, not again as a photo label.",
+      "Filters: cancellation, breakfast, no prepayment."
+    ],
+    "implementation": "examples/room-card.html"
+  },
+  {
+    "id": "search-form",
+    "name": "Форма поиска",
+    "group": "discovery",
+    "source": "src/sections/find-search.js; src/sections/frame.css",
+    "props": [
+      "destination: string",
+      "dates: DateRange",
+      "adults: number",
+      "children: number[]",
+      "pet: boolean",
+      "business: boolean",
+      "car: boolean"
+    ],
+    "states": [
+      "empty",
+      "filled",
+      "invalid",
+      "loading"
+    ],
+    "events": [
+      "submit",
+      "editDestination",
+      "editDates",
+      "editGuests"
+    ],
+    "rules": [
+      "Title above content tabs; quiet soft panel without outline; blue primary CTA.",
+      "Recent filters: city, dates, abbreviated adult count only."
+    ],
+    "implementation": "examples/search-form.html"
+  },
+  {
+    "id": "history",
+    "name": "История фильтров",
+    "group": "discovery",
+    "source": "src/sections/find-recents.js",
+    "props": [
+      "items: SearchQuery[]"
+    ],
+    "states": [
+      "two-examples",
+      "empty"
+    ],
+    "events": [
+      "repeatSearch(query)"
+    ],
+    "rules": [
+      "Equal compact dimensions; two sample cities.",
+      "No separate “Вы искали” heading; no icon background."
+    ],
+    "implementation": "examples/history.html"
+  },
+  {
+    "id": "photo-search",
+    "name": "Подбор по фото",
+    "group": "discovery",
+    "source": "src/sections/frame.css",
+    "props": [
+      "images: Upload[]"
+    ],
+    "states": [
+      "empty",
+      "uploaded",
+      "searching",
+      "results",
+      "error"
+    ],
+    "events": [
+      "upload",
+      "search"
+    ],
+    "rules": [
+      "Dark background ensures white text contrast.",
+      "Lives below recent searches and above collections/viewed hotels."
+    ],
+    "implementation": "examples/photo-search.html"
+  },
+  {
+    "id": "collections",
+    "name": "Подборки",
+    "group": "discovery",
+    "source": "src/sections/find-results.js",
+    "props": [
+      "items: Collection[]"
+    ],
+    "states": [
+      "default"
+    ],
+    "events": [
+      "openCollection(tag)"
+    ],
+    "rules": [
+      "Three horizontal entries: Горячие скидки, На пару дней, Куда угодно.",
+      "Illustrations are assets; do not treat them as icon tiles."
+    ],
+    "implementation": "examples/collections.html"
+  },
+  {
+    "id": "nearby",
+    "name": "Места рядом",
+    "group": "discovery",
+    "source": "src/home/nearby/nearby.js; src/home/nearby/nearby.css",
+    "props": [
+      "interests: string[]",
+      "places: Place[]",
+      "view: list | map"
+    ],
+    "states": [
+      "list",
+      "map",
+      "filtered",
+      "no-results"
+    ],
+    "events": [
+      "editInterests",
+      "openPlace",
+      "route",
+      "selectView"
+    ],
+    "rules": [
+      "Photo + name + theme + short description + duration and transport.",
+      "Home card body clickable; footer actions remain separate."
+    ],
+    "implementation": "examples/nearby.html"
+  },
+  {
+    "id": "map",
+    "name": "Карта и маркеры",
+    "group": "discovery",
+    "source": "src/maps/2gis.js; src/sections/find-results.js",
+    "props": [
+      "markers: Marker[]",
+      "selectedId?: string",
+      "expanded: boolean"
+    ],
+    "states": [
+      "collapsed",
+      "expanded",
+      "selected",
+      "loading",
+      "unavailable"
+    ],
+    "events": [
+      "selectMarker",
+      "expand",
+      "collapse",
+      "route"
+    ],
+    "rules": [
+      "2GIS adapter, coordinate order per SDK contract. Never expose server-only secrets.",
+      "Results: edge-to-edge collapsed map before hotels; marker opens same hotel facts.",
+      "Swipe-up collapse plus visible button fallback; no textual map hints overlay."
+    ],
+    "implementation": "examples/map.html"
+  },
+  {
+    "id": "reviews",
+    "name": "Отзывы об отеле",
+    "group": "discovery",
+    "source": "src/sections/hotel-details.js",
+    "props": [
+      "score: number",
+      "count: number",
+      "reviews: Review[]"
+    ],
+    "states": [
+      "summary",
+      "list",
+      "empty"
+    ],
+    "events": [
+      "openReviews",
+      "expandReview"
+    ],
+    "rules": [
+      "Separate review score from property star category; omit “из 10”."
+    ],
+    "implementation": "examples/reviews.html"
+  },
+  {
+    "id": "payment",
+    "name": "Оплата брони",
+    "group": "booking",
+    "source": "src/sections/payment-booking-summary.js",
+    "props": [
+      "booking: Booking",
+      "guests: Guest[]",
+      "points: number",
+      "method: PaymentMethod"
+    ],
+    "states": [
+      "draft",
+      "validating",
+      "processing",
+      "success",
+      "failed"
+    ],
+    "events": [
+      "editGuest",
+      "addGuest",
+      "applyPoints",
+      "pay"
+    ],
+    "rules": [
+      "Баллы Ключей; compact hotel and guest summaries.",
+      "Additional guest only when requested occupancy > 1.",
+      "Payment success must come from a transaction response, not the local UI demo."
+    ],
+    "implementation": "examples/payment.html"
+  },
+  {
+    "id": "booking-documents",
+    "name": "Бронь и документы",
+    "group": "booking",
+    "source": "src/scenarios/before.js; src/scenarios/before.css",
+    "props": [
+      "booking: Booking",
+      "payment: Payment",
+      "documents: Document[]"
+    ],
+    "states": [
+      "confirmed",
+      "partial-payment",
+      "full-payment"
+    ],
+    "events": [
+      "downloadDocuments",
+      "changeBooking"
+    ],
+    "rules": [
+      "All information visible, no accordion; consistent label/value columns.",
+      "Confirmation by booking number; payment status by payment heading.",
+      "Download action opens document picker."
+    ],
+    "implementation": "examples/booking-documents.html"
+  },
+  {
+    "id": "document-picker",
+    "name": "Документы поездки",
+    "group": "booking",
+    "source": "src/scenarios/before.js; src/scenarios/after.js",
+    "props": [
+      "documents: Document[]"
+    ],
+    "states": [
+      "available",
+      "generating",
+      "failed"
+    ],
+    "events": [
+      "download(id)",
+      "saveAll"
+    ],
+    "rules": [
+      "Receipt and confirmation; one bottom action Сохранить все документы.",
+      "Downloads require genuine generated files in production."
+    ],
+    "implementation": "examples/document-picker.html"
+  },
+  {
+    "id": "change-booking",
+    "name": "Изменить бронь",
+    "group": "booking",
+    "source": "src/scenarios/booking-change.js",
+    "props": [
+      "booking: Booking",
+      "draft: BookingDraft",
+      "quote?: Quote"
+    ],
+    "states": [
+      "edit",
+      "new-conditions",
+      "confirming",
+      "success",
+      "error"
+    ],
+    "events": [
+      "back",
+      "quote",
+      "confirm"
+    ],
+    "rules": [
+      "Back action belongs with navigation, not below submit.",
+      "After success return to Trips with Бронь успешно изменена toast."
+    ],
+    "implementation": "examples/change-booking.html"
+  },
+  {
+    "id": "checkin",
+    "name": "Онлайн-регистрация",
+    "group": "booking",
+    "source": "src/scenarios/booking-change.js; src/sections/frame.css",
+    "props": [
+      "step: 1 | 2",
+      "guests: Guest[]",
+      "status: string"
+    ],
+    "states": [
+      "step-1",
+      "step-2",
+      "submitting",
+      "completed",
+      "error"
+    ],
+    "events": [
+      "next",
+      "back",
+      "submit"
+    ],
+    "rules": [
+      "No repeated hotel/adult banner, no employee-help block.",
+      "Completed status and button share application typography and shapes."
+    ],
+    "implementation": "examples/checkin.html"
+  },
+  {
+    "id": "share",
+    "name": "Поделиться",
+    "group": "booking",
+    "source": "src/scenarios/before.js; src/sections/hotel-share.js",
+    "props": [
+      "context: trip | hotel | referral",
+      "permission: read | manage"
+    ],
+    "states": [
+      "read",
+      "manage",
+      "copied",
+      "native-share",
+      "error"
+    ],
+    "events": [
+      "share",
+      "copy",
+      "permissionChange"
+    ],
+    "rules": [
+      "Trip: hotel + read/manage option + Поделиться ссылкой.",
+      "Hotel: action buttons only; no hotel summary or shared collection.",
+      "Permission is an enforced backend capability, never only a label."
+    ],
+    "implementation": "examples/share.html"
+  },
+  {
+    "id": "route",
+    "name": "Построить маршрут",
+    "group": "booking",
+    "source": "src/scenarios/taxi-route.js",
+    "props": [
+      "destination: {name,address,coordinates}"
+    ],
+    "states": [
+      "chooser",
+      "external-preview",
+      "unavailable"
+    ],
+    "events": [
+      "openMaps",
+      "openGo",
+      "back"
+    ],
+    "rules": [
+      "Choose Яндекс Карты / Яндекс Go; external app visibly distinct.",
+      "Departure “Ваше местоположение”, arrival hotel name and address."
+    ],
+    "implementation": "examples/route.html"
+  },
+  {
+    "id": "loyalty",
+    "name": "Баллы и уровень",
+    "group": "account",
+    "source": "src/sections/host.js; src/scenarios/after.js",
+    "props": [
+      "balance: number",
+      "level: string",
+      "progress: number",
+      "history: PointTransaction[]"
+    ],
+    "states": [
+      "silver",
+      "progress",
+      "earned",
+      "spent",
+      "empty-history"
+    ],
+    "events": [
+      "details",
+      "history",
+      "rules"
+    ],
+    "rules": [
+      "Blue accent combines balance and level; no booking CTA on Benefits.",
+      "Completed trip reward example +2 240; business earning rules are configurable."
+    ],
+    "implementation": "examples/loyalty.html"
+  },
+  {
+    "id": "referral",
+    "name": "Путешествуйте с друзьями",
+    "group": "account",
+    "source": "src/scenarios/search.js; src/scenarios/after.js; src/sections/host.js",
+    "props": [
+      "reward: number",
+      "url: URL"
+    ],
+    "states": [
+      "default",
+      "shared",
+      "rewarded"
+    ],
+    "events": [
+      "share"
+    ],
+    "rules": [
+      "One identical component across Trips and Benefits.",
+      "Quiet button, concise value: friend installs → points → next booking."
+    ],
+    "implementation": "examples/referral.html"
+  },
+  {
+    "id": "profile",
+    "name": "Профиль",
+    "group": "account",
+    "source": "src/sections/host.js; src/sections/host.css",
+    "props": [
+      "guest: Guest",
+      "avatar: URL",
+      "loyalty: Loyalty"
+    ],
+    "states": [
+      "default",
+      "photo-selected",
+      "uploading",
+      "error"
+    ],
+    "events": [
+      "uploadAvatar",
+      "documents",
+      "payment",
+      "travellers",
+      "back"
+    ],
+    "rules": [
+      "Secondary header, origin-aware back; avatar + name + phone.",
+      "Passport uploads for booking/check-in; no email in top identity block."
+    ],
+    "implementation": "examples/profile.html"
+  },
+  {
+    "id": "notifications",
+    "name": "Уведомления",
+    "group": "account",
+    "source": "src/sections/notification-seed.js",
+    "props": [
+      "items: Notification[]",
+      "origin: Route"
+    ],
+    "states": [
+      "unread",
+      "read",
+      "empty"
+    ],
+    "events": [
+      "open",
+      "settings",
+      "back"
+    ],
+    "rules": [
+      "Newest review first, earlier login below.",
+      "No-booking has no stay survey; day1 no first-night survey; checkout/after add trip survey."
+    ],
+    "implementation": "examples/notifications.html"
+  },
+  {
+    "id": "feedback",
+    "name": "Опрос проживания",
+    "group": "account",
+    "source": "src/feedback/feedback.js; src/feedback/reviews.js",
+    "props": [
+      "kind: first-night | trip",
+      "rating: number",
+      "text: string",
+      "photos: Upload[]"
+    ],
+    "states": [
+      "rating",
+      "details",
+      "submitting",
+      "thanks",
+      "tips-if-5",
+      "error"
+    ],
+    "events": [
+      "next",
+      "back",
+      "attach",
+      "submit",
+      "tip"
+    ],
+    "rules": [
+      "Two steps; no hotel/date/nights header and no private message.",
+      "Trip copy invites impressions to help other guests choose the hotel.",
+      "Only submitted 5 stars can reveal tips; negative feedback stays equally easy."
+    ],
+    "implementation": "examples/feedback.html"
+  },
+  {
+    "id": "chat",
+    "name": "Чаты и сообщения",
+    "group": "communication",
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js; src/sections/frame.css",
+    "props": [
+      "threads: Thread[]",
+      "messages: Message[]",
+      "draft: string"
+    ],
+    "states": [
+      "list",
+      "unread",
+      "conversation",
+      "sending",
+      "failed",
+      "typing"
+    ],
+    "events": [
+      "openThread",
+      "send",
+      "attach",
+      "retry"
+    ],
+    "rules": [
+      "Same font roles; inbound/outbound visually distinct; timestamp as caption.",
+      "Preserve draft and scroll on switching sections."
+    ],
+    "implementation": "examples/chat.html"
+  },
+  {
+    "id": "sheet",
+    "name": "Нижняя панель",
+    "group": "overlays",
+    "source": "src/sections/frame.css; src/booking/services.css",
+    "props": [
+      "title: string",
+      "dismissible: boolean",
+      "actions: Action[]"
+    ],
+    "states": [
+      "opening",
+      "open",
+      "closing",
+      "submitting"
+    ],
+    "events": [
+      "close",
+      "confirm"
+    ],
+    "rules": [
+      "Top radius 24; title 20; body 14; field16.",
+      "Dialog semantics, focus trap, Escape/dismiss, focus return, safe-area padding."
+    ],
+    "implementation": "examples/sheet.html"
+  },
+  {
+    "id": "toast",
+    "name": "Уведомление о действии",
+    "group": "overlays",
+    "source": "src/arbana/tokens.css; src/sections/frame.css",
+    "props": [
+      "message: string",
+      "tone: success | error | info",
+      "duration?: number"
+    ],
+    "states": [
+      "enter",
+      "visible",
+      "exit"
+    ],
+    "events": [
+      "dismiss"
+    ],
+    "rules": [
+      "Short factual result; no “демо” boilerplate.",
+      "aria-live polite, no focus steal. Errors needing action stay in page."
+    ],
+    "implementation": "examples/toast.html"
+  },
+  {
+    "id": "empty-state",
+    "name": "Пустые, ошибки и загрузка",
+    "group": "overlays",
+    "source": "src/sections/frame.css; src/arbana/ui-standards.css",
+    "props": [
+      "kind: empty | error | loading | offline",
+      "message: string",
+      "action?: Action"
+    ],
+    "states": [
+      "empty",
+      "error",
+      "loading",
+      "offline"
+    ],
+    "events": [
+      "retry",
+      "action"
+    ],
+    "rules": [
+      "Explain what happened and next action; plain icon, no arbitrary decorative tile.",
+      "Reserve geometry with skeleton; reduced motion disables shimmer."
+    ],
+    "implementation": "examples/empty-state.html"
+  }
+]

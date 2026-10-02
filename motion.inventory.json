@@ -1,0 +1,819 @@
+[
+  {
+    "source": "src/arbana/adapter.css",
+    "selector": "#keysUnifiedPrototype button",
+    "declarations": "transition:background-color .15s ease,color .15s ease,border-color .15s ease"
+  },
+  {
+    "source": "src/arbana/adapter.css",
+    "selector": "#keysUnifiedPrototype *",
+    "declarations": "scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:.01ms!important;animation-iteration-count:1!important"
+  },
+  {
+    "source": "src/arbana/app-nav.css",
+    "selector": "/* Original Arbana AH / glass / glass-cap: the white cap moves independently\n   of the buttons, including transitions between host and embedded sections. */\n:is(#keysUnifiedPrototype#keysUnifiedPrototype,.keys-module-screen) .keys-bottom-nav::before",
+    "declarations": "content:\"\";position:absolute;z-index:0;pointer-events:none;\n  top:4px;bottom:4px;left:4px;width:calc((100% - 8px)/var(--keys-nav-count,4));\n  background:#ffffffeb;border-radius:999px;box-shadow:0 1px 3px #1c28410f;\n  transform:translateX(calc(var(--keys-nav-index,0)*100%));\n  opacity:var(--keys-nav-visible,1);\n  transition:transform var(--keys-nav-duration,.38s) cubic-bezier(.2,.8,.2,1),opacity .2s;"
+  },
+  {
+    "source": "src/arbana/app-nav.css",
+    "selector": ":is(#keysUnifiedPrototype#keysUnifiedPrototype,.keys-module-screen) .keys-bottom-nav .keys-bottom-tab",
+    "declarations": "z-index:1!important;\n  transition:scale .22s cubic-bezier(.34,1.56,.64,1),color .2s ease,background-color .2s ease!important;"
+  },
+  {
+    "source": "src/arbana/app-nav.css",
+    "selector": ":is(#keysUnifiedPrototype#keysUnifiedPrototype,.keys-module-screen) .keys-bottom-nav .keys-bottom-tab:active",
+    "declarations": "scale:.96;transition-duration:80ms!important;"
+  },
+  {
+    "source": "src/arbana/app-nav.css",
+    "selector": ":is(#keysUnifiedPrototype#keysUnifiedPrototype,.keys-module-screen) .keys-bottom-nav::before,\n  :is(#keysUnifiedPrototype#keysUnifiedPrototype,.keys-module-screen) .keys-bottom-nav .keys-bottom-tab",
+    "declarations": "transition:none!important"
+  },
+  {
+    "source": "src/arbana/app-nav.js",
+    "excerpt": "        icon?.animate(["
+  },
+  {
+    "source": "src/arbana/app-nav.js",
+    "excerpt": "        ],{duration:420,easing:'cubic-bezier(.34,1.56,.64,1)',fill:'both'});"
+  },
+  {
+    "source": "src/arbana/tokens.css",
+    "selector": ":root",
+    "declarations": "--font-sans: \"Golos Text Variable\", sans-serif;\n  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;\n  --color-black: #000;\n  --color-white: #fff;\n  --spacing: .25rem;\n  --container-4xl: 56rem;\n  --text-sm: .875rem;\n  --text-sm--line-height: calc(1.25 / .875);\n  --text-lg: 1.125rem;\n  --text-lg--line-height: calc(1.75 / 1.125);\n  --text-xl: 1.25rem;\n  --text-xl--line-height: calc(1.75 / 1.25);\n  --font-weight-normal: 400;\n  --font-weight-medium: 500;\n  --font-weight-semibold: 600;\n  --font-weight-bold: 700;\n  --font-weight-extrabold: 800;\n  --tracking-normal: 0em;\n  --tracking-widest: .1em;\n  --leading-tight: 1.25;\n  --leading-snug: 1.375;\n  --leading-normal: 1.5;\n  --leading-relaxed: 1.625;\n  --radius-md: .375rem;\n  --radius-lg: .5rem;\n  --radius-xl: .75rem;\n  --radius-2xl: 1rem;\n  --ease-in: cubic-bezier(.4, 0, 1, 1);\n  --ease-out: cubic-bezier(0, 0, .2, 1);\n  --animate-spin: spin 1s linear infinite;\n  --blur-sm: 8px;\n  --blur-md: 12px;\n  --default-transition-duration: .15s;\n  --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);\n  --default-font-family: var(--font-sans);\n  --default-mono-font-family: var(--font-mono);\n  --text-10: calc(10px * var(--text-scale,1));\n  --text-11: calc(11px * var(--text-scale,1));\n  --text-12: calc(12px * var(--text-scale,1));\n  --text-13: calc(13px * var(--text-scale,1));\n  --text-14: calc(14px * var(--text-scale,1));\n  --text-15: calc(15px * var(--text-scale,1));\n  --text-16: calc(16px * var(--text-scale,1));\n  --text-17: calc(17px * var(--text-scale,1));\n  --text-18: calc(18px * var(--text-scale,1));\n  --text-19: calc(19px * var(--text-scale,1));\n  --text-20: calc(20px * var(--text-scale,1));\n  --text-21: calc(21px * var(--text-scale,1));\n  --text-22: calc(22px * var(--text-scale,1));\n  --text-23: calc(23px * var(--text-scale,1));\n  --text-24: calc(24px * var(--text-scale,1));\n  --text-25: calc(25px * var(--text-scale,1));\n  --text-26: calc(26px * var(--text-scale,1));\n  --text-28: calc(28px * var(--text-scale,1));\n  --text-29: calc(29px * var(--text-scale,1));\n  --text-32: calc(32px * var(--text-scale,1));\n  --text-34: calc(34px * var(--text-scale,1));\n  --text-36: calc(36px * var(--text-scale,1));\n  --text-40: calc(40px * var(--text-scale,1));\n  --color-card: #fff;\n  --color-on-brand: #fff;\n  --color-on-photo: #fff;\n  --color-photo-chip: #fff;\n  --color-stage: #000;\n  --color-raise: #fff;\n  --color-ink-1: #41649b;\n  --color-ink-2: #5b7094;\n  --color-ink-3: #617494;\n  --color-ink-4: #6c7b95;\n  --color-ink-5: #7e8aa1;\n  --color-ink-6: #7490b8;\n  --color-ink-7: #7a92c0;\n  --color-ink-8: #91a3bf;\n  --color-ink-9: #9aa6bf;\n  --color-paper: #fbfcfe;\n  --color-mist: #f7f9fd;\n  --color-fill: #f1f4fa;\n  --color-canvas: #edf0f5;\n  --color-shade: #e5e9f2;\n  --color-edge-1: #e6ecf8;\n  --color-edge-2: #dfe5ee;\n  --color-edge-3: #dce4f2;\n  --color-edge-4: #c9d3e6;\n  --color-brand-solid: #2c5deb;\n  --color-brand-dark: #1f47b8;\n  --color-brand-dark-2: #2451cf;\n  --color-brand-hover: #1f47b8;\n  --color-brand-line: #c8d4f3;\n  --color-brand-ring: #bfcffa;\n  --color-brand-tint: #ecf1ff;\n  --color-brand-mist: #e1e9ff;\n  --color-brand-pale: #dce6ff;\n  --color-success: #32714f;\n  --color-success-2: #42785a;\n  --color-success-bg: #edf5ef;\n  --color-warning: #89612e;\n  --color-warning-2: #986c4c;\n  --color-sun: #d99a2b;\n  --color-danger-solid: #b3473b;\n  --color-danger-solid-2: #b65353;\n  --color-alert: #d4353b;\n  --color-night: #14201f;\n  --color-map: #edf1ec;\n  --color-said: #324e7e;\n  --color-meta: #6b80a6;\n  --color-stamp: #7f93b5;\n  --color-hint: #667c9e;\n  --color-idea: #7691c0;\n  --color-note: #7485a2;\n  --color-note-2: #7585a0;\n  --color-lead: #5b75a3;\n  --color-param: #7890b6;\n  --color-step: #7890b4;\n  --color-tab: #77849b;\n  --color-tab-2: #73829b;\n  --color-empty: #9aa4b8;\n  --color-past: #c5ccd9;\n  --color-off: #9aa9c3;\n  --color-off-2: #b7c3d6;\n  --color-off-3: #8a99b5;\n  --color-busy: #a6b0c3;\n  --color-price: #294473;\n  --color-star: #809bd7;\n  --color-soft-2: #ecf1ff;\n  --color-soft-3: #eef3ff;\n  --color-soft-4: #e8eefe;\n  --color-soft-hover: #e5edff;\n  --color-dot: #8ca9e7;\n  --color-typing: #8a9ab5;\n  --color-grab: #d7deea;\n  --color-track: #d6e0fa;\n  --color-track-2: #dfe7fb;\n  --color-dash: #c9d5ea;\n  --color-dash-2: #c9d7fb;\n  --color-chip-line: #dce5fa;\n  --color-edge-hover: #cfd7e4;\n  --color-header-line: #e8ecf4;\n  --color-shade-2: #e5e5ea;\n  --color-toast: #20395a;\n  --color-live: #2fb36b;\n  --color-idle: #c3cad6;\n  --color-success-3: #366451;\n  --color-success-4: #467559;\n  --color-success-5: #37634f;\n  --color-success-7: #4b7d62;\n  --color-success-8: #387456;\n  --color-success-9: #317657;\n  --color-leaf-2: #7f9a8a;\n  --color-warning-3: #946647;\n  --color-warning-4: #955b3e;\n  --color-warning-5: #8f6245;\n  --color-warning-bg: #fff5ee;\n  --color-warning-bg-2: #fff8f1;\n  --color-warning-bg-3: #fbf3ea;\n  --color-warning-bg-4: #fbf3e6;\n  --color-warning-line: #efe2d7;\n  --color-danger-2: #ac5c52;\n  --color-danger-3: #ac6046;\n  --color-danger-4: #a75b47;\n  --color-weekend: #b0603f;\n  --radius-4: 4px;\n  --radius-8: 8px;\n  --radius-10: 10px;\n  --radius-12: 12px;\n  --radius-13: 13px;\n  --radius-14: 14px;\n  --radius-15: 15px;\n  --radius-16: 16px;\n  --radius-17: 17px;\n  --radius-20: 20px;\n  --radius-22: 22px;\n  --radius-24: 24px;\n  --radius-28: 28px;\n  --radius-30: 30px;\n  --drop-shadow-photo: 0 1px 3px #00000073;\n  --ease-soft: cubic-bezier(.22, 1, .36, 1);\n  --ease-ios: cubic-bezier(.32, .72, 0, 1);\n  --ease-spring: cubic-bezier(.34, 1.56, .64, 1);\n  --animate-fade-in: fade-in .24s var(--ease-soft) both;\n  --animate-fade-up: fade-up .36s var(--ease-soft) both;\n  --animate-msg-in: msg-in .32s var(--ease-soft) both;\n  --animate-tab-pop: tab-pop .42s var(--ease-spring) both;\n  --animate-toast-in: toast-in .34s var(--ease-spring) both;\n  --animate-toast-out: toast-out .2s ease-in both;\n  --animate-tab-content: tab-content .26s ease-out both;\n  --color-brand: #2c5deb;\n  --color-ink: #1c2841;\n  --color-muted: #6c7790;\n  --color-line: #e8ecf4;\n  --color-surface: #f5f7fb;\n  --color-soft: #f0f4ff;\n  --color-danger: #b3473b;\n  --radius-card: 18px;\n  --gutter: 24px;\n  --text-scale: 1;"
+  },
+  {
+    "source": "src/arbana/ui-standards.css",
+    "selector": "[aria-label=\"Способ поиска\"]>span[aria-hidden=\"true\"]",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/booking/active-services.css",
+    "selector": "#keysUnifiedPrototype #keysStayDetails .ksvc-orders-toggle svg",
+    "declarations": "width:16px;height:16px;transition:transform .18s ease"
+  },
+  {
+    "source": "src/booking/active-services.css",
+    "selector": "#keysUnifiedPrototype #keysStayDetails .ksvc-orders-toggle svg",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/booking/booking.css",
+    "selector": "#keysUnifiedPrototype .kb-late-block .kb-late",
+    "declarations": "display:flex;align-items:flex-start;gap:12px;width:100%;padding:16px;border:1px solid var(--color-line);border-radius:20px;background:var(--color-card);text-align:left;font:inherit;color:var(--color-ink);cursor:pointer;transition:background-color .18s ease"
+  },
+  {
+    "source": "src/booking/booking.css",
+    "selector": "#keysUnifiedPrototype #keysStayDetails .kb-row",
+    "declarations": "display:flex;align-items:center;gap:12px;width:100%;min-height:72px;padding:14px 0;border:0;border-bottom:1px solid var(--color-line);border-radius:0;background:transparent;text-align:left;font:inherit;color:var(--color-ink);cursor:pointer;transition:background-color .18s ease"
+  },
+  {
+    "source": "src/booking/booking.css",
+    "selector": "#keysUnifiedPrototype :is(.kb-row,.kb-late)",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/booking/services.css",
+    "selector": "#keysUnifiedPrototype #keysStayDetails .ksvc-catalog button",
+    "declarations": "font-family:var(--font-sans);color:var(--color-ink);cursor:pointer;text-align:left;box-shadow:none;transition:background .18s"
+  },
+  {
+    "source": "src/booking/services.css",
+    "selector": "#keysUnifiedPrototype #keysStayDetails .ksvc-catalog button",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/feedback/feedback.css",
+    "selector": "#keysUnifiedPrototype #keysFeedbackFlow .kfb-star",
+    "declarations": "flex:0 1 48px;width:48px;height:52px;min-width:44px;padding:0!important;color:#88ac94!important;border-radius:12px;background:transparent!important;transition:color .18s,background .18s,transform .18s"
+  },
+  {
+    "source": "src/feedback/feedback.css",
+    "selector": "#keysUnifiedPrototype #keysFeedbackFlow .kfb-star",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/home/home.css",
+    "selector": "#keysUnifiedPrototype :is(.kh-home,.kpa-home) button.kh-detail-link",
+    "declarations": "min-height:44px;padding:8px 0;margin-right:0;flex:none;\n  border:0;border-radius:10px;background:transparent;\n  transition:background-color .15s ease,color .15s ease;"
+  },
+  {
+    "source": "src/home/home.css",
+    "selector": "#keysUnifiedPrototype .kh-home button",
+    "declarations": "transition:background-color .18s ease,transform .18s ease"
+  },
+  {
+    "source": "src/home/home.css",
+    "selector": "#keysUnifiedPrototype .kh-home button",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/home/nearby/nearby.css",
+    "selector": "/* The same white surface, type hierarchy and secondary link as home cards. */\n#keysUnifiedPrototype .kn-interests",
+    "declarations": "display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:76px;padding:16px;background:var(--color-card);border:1px solid var(--color-line);border-radius:20px;text-align:left;transition:background-color .15s ease"
+  },
+  {
+    "source": "src/home/nearby/nearby.css",
+    "selector": "#keysUnifiedPrototype .kn-interests",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/maps/2gis.js",
+    "excerpt": ".max(...lat)]},{padding:padding(options),maxZoom:options.maxZoom??15,animation:{duration:options.duration??0}});"
+  },
+  {
+    "source": "src/maps/2gis.js",
+    "excerpt": "  setLocation(location){const animation={duration:location.duration??0};if(location.center)this.native.setCenter(location.center,animation);if(location.zoom!==undefined)this.native.setZoom(location.zoom,animation);}"
+  },
+  {
+    "source": "src/maps/2gis.js",
+    "excerpt": "   if(dx||dy)this.native.setCenter(this.native.unproject([w/2+dx,h/2+dy]),{duration:200});"
+  },
+  {
+    "source": "src/prototype.html",
+    "selector": ".kdf-spinner",
+    "declarations": "position:absolute;inset:-2px;border:3px solid transparent;border-top-color:light-dark(#2857d8,#9fb2ff);border-radius:50%;animation:kdf-spin 1.1s linear infinite"
+  },
+  {
+    "source": "src/prototype.html",
+    "selector": ".kdf-spinner",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "src/prototype.html",
+    "selector": ".kdf-spinner",
+    "declarations": "position:absolute;inset:-2px;border:3px solid transparent;border-top-color:light-dark(#2857d8,#9fb2ff);border-radius:50%;animation:kdf-spin 1.1s linear infinite"
+  },
+  {
+    "source": "src/prototype.html",
+    "selector": ".kdf-spinner",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "selector": "#keysUnifiedPrototype#keysUnifiedPrototype .kpa-manage",
+    "declarations": "display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 16px;width:100%;border:0;border-radius:14px;background:var(--color-soft);color:var(--color-brand)!important;font:var(--font-weight-medium) var(--text-14)/var(--leading-normal) var(--font-sans);text-align:center;cursor:pointer;transition:background-color .18s ease"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "selector": "#keysUnifiedPrototype .kpa-go-launch-progress",
+    "declarations": "width:36px;height:4px;margin-top:24px;background:#ffdb4d;border-radius:4px;animation:kpaGoPulse .7s ease-in-out infinite alternate"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "selector": "#keysUnifiedPrototype .kh-overlay:has(.kpa-go-preview):not([hidden])",
+    "declarations": "display:flex;flex-direction:column;background:#fff;animation:kpaGoEnter .28s ease-out"
+  },
+  {
+    "source": "src/scenarios/before.css",
+    "selector": "#keysUnifiedPrototype .kpa-go-launch-progress,#keysUnifiedPrototype .kh-overlay:has(.kpa-go-preview)",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "src/scenarios/scenarios.css",
+    "selector": ".keys-scenario-toggle",
+    "declarations": "display:flex;align-items:center;gap:8px;width:100%;height:36px;padding:0 10px 0 12px;border:1px solid var(--color-edge-2);border-radius:999px;background:var(--color-card);color:var(--color-ink);font:600 var(--text-12)/1.5 var(--font-sans);text-align:left;cursor:pointer;box-shadow:var(--shadow-chip,none);transition:border-color .15s"
+  },
+  {
+    "source": "src/scenarios/scenarios.css",
+    "selector": ".keys-scenario-toggle>svg:last-child",
+    "declarations": "transition:transform .15s"
+  },
+  {
+    "source": "src/scenarios/scenarios.css",
+    "selector": ".keys-scenario-toggle,.keys-scenario-toggle>svg:last-child",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/scenarios/search.css",
+    "selector": "#keysUnifiedPrototype#keysUnifiedPrototype .kse-find",
+    "declarations": "display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:48px;margin:0;padding:12px 16px;border:0;border-radius:14px;background:white;color:var(--color-brand-solid);font:500 var(--text-14)/1.5 var(--font-sans);cursor:pointer;transition:transform .18s,background .18s"
+  },
+  {
+    "source": "src/scenarios/search.css",
+    "selector": "#keysUnifiedPrototype .kse-home:not([hidden]) .kse-postcard-sea",
+    "declarations": "animation:kseSea .45s ease-out"
+  },
+  {
+    "source": "src/scenarios/search.css",
+    "selector": "#keysUnifiedPrototype .kse-home:not([hidden]) .kse-postcard-city",
+    "declarations": "animation:kseCity .55s ease-out"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-notice-item",
+    "declarations": "display:flex;align-items:flex-start;gap:12px;width:100%;padding:18px 16px;border:1px solid var(--color-line);border-radius:20px;background:white;text-align:left;transition:background .18s,border-color .18s;margin-bottom:10px"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-notice-item",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-change-back",
+    "declarations": "display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:44px;margin-top:8px;padding:10px 12px;border:0;border-radius:12px;background:transparent;color:var(--color-muted);font-family:inherit;font-size:14px;line-height:20px;font-weight:500;cursor:pointer;transition:color .18s,background .18s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-change-back",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-trip-share-option",
+    "declarations": "display:flex;align-items:flex-start;gap:12px;border:1px solid var(--color-line);border-radius:16px;padding:14px;cursor:pointer;transition:background .15s,border-color .15s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-find-history-card",
+    "declarations": "position:relative;display:grid;flex:0 0 136px;width:136px;min-width:136px;max-width:136px;box-sizing:border-box;height:64px;grid-template-columns:max-content minmax(0,1fr);grid-template-rows:20px 18px;align-content:center;gap:4px 6px;padding:10px 12px;text-align:left;border:0;border-radius:12px;background:var(--color-mist);color:var(--color-ink);scroll-snap-align:start;transition:background .18s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-find-saved",
+    "declarations": "display:flex;align-items:center;gap:12px;width:100%;min-height:76px;margin-top:16px;padding:14px 16px;border:1px solid var(--color-line);border-radius:20px;background:var(--color-card);color:var(--color-ink);text-align:left;transition:background-color .18s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-find-saved",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-results-map-canvas",
+    "declarations": "position:relative;height:176px;overflow:hidden;background:var(--color-soft);transition:height .28s cubic-bezier(.2,.8,.2,1)"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-results-map-canvas",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-result-hotel-save",
+    "declarations": "position:absolute;z-index:10;top:10px;right:10px;display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid #ffffff80;border-radius:50%;background:#fffffff2;color:var(--color-ink);box-shadow:0 2px 8px #20385d12;transition:color .18s,background .18s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-find-collection",
+    "declarations": "display:flex;flex-direction:column;align-items:stretch;min-width:0;padding:0 0 12px;border:1px solid var(--color-line);border-radius:20px;background:var(--color-card);color:var(--color-ink);overflow:hidden;text-align:left;transition:background .18s,transform .18s"
+  },
+  {
+    "source": "src/sections/frame.css",
+    "selector": ".keys-find-collection",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/host.css",
+    "selector": "#keysUnifiedPrototype :is(.keys-profile-photo,.keys-profile-loyalty)",
+    "declarations": "transition:transform .16s ease"
+  },
+  {
+    "source": "src/sections/host.css",
+    "selector": "#keysUnifiedPrototype .keys-benefits summary>svg",
+    "declarations": "width:16px;height:16px;flex:none;margin-left:auto;color:var(--color-muted);transition:transform .18s ease"
+  },
+  {
+    "source": "src/sections/host.css",
+    "selector": "#keysUnifiedPrototype .keys-benefits summary>svg",
+    "declarations": "transition:none"
+  },
+  {
+    "source": "src/sections/host.js",
+    "excerpt": "    profileAnimations=parts.map(part=>part.animate(frames,{duration:exiting?160:280,easing:exiting?'cubic-bezier(.4,0,1,1)':'cubic-bezier(.22,1,.36,1)',fill:'both'}));"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "){o=s[d];var p=s[d+1];D2(o,s[d+2]),o=o.ownerDocument.documentElement,o!==null&&o.animate({opacity:[0,0],pointerEvents:[\"none\",\"none\"]},{duration:0,fill:\"forwards\",pseudoElement:\"::view-transition-group(\"+p+\")\"})}s=i.containerInfo,s=s.nodeType===9?s.documentElement:s.ownerDocument.document"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": ",s!==null&&s.style.viewTransitionName===\"\"&&(s.style.viewTransitionName=\"none\",s.animate({opacity:[0,0],pointerEvents:[\"none\",\"none\"]},{duration:0,fill:\"forwards\",pseudoElement:\"::view-transition-group(root)\"}),s.animate({width:[0,0],height:[0,0]},{duration:0,fill:\"forwards\",pseudoElement"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "n-\"+s+\"(\"+i+\")\"}ni.prototype.animate=function(s,i){return i=typeof i==\"number\"?{duration:i}:V({},i),i.pseudoElement=this._selector,this._scope.animate(s,i)},ni.prototype.getAnimations=function(){for(var s=this._scope,i=this._selector,o=s.getAnimations({subtree:!0}),d=[],p=0;p<o.length;p++"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "т готов к вашему времени\",done:\"Ужин состоялся\",times:[\"19:30\",\"20:00\",\"20:30\"],duration:90},spa:{expected:\"Ждём вас в спа на 1 этаже\",done:\"Массаж завершён\",times:[\"18:00\",\"18:30\",\"19:00\",\"19:30\"],busy:[\"18:00\"],lastSeat:\"19:00\",alternatives:[\"18:30\",\"19:30\"],duration:60},breakfast:{expe"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "рак в выбранное время\",done:\"Завтрак доставлен\",times:[\"09:00\",\"09:30\",\"10:00\"],duration:30},towels:{expected:\"Принесём в течение 15 минут\",done:\"Полотенца доставлены\",times:[\"Как можно скорее\",\"Через час\"],day:\"first\"},cleaning:{expected:\"Уборка займёт около 30 минут\",done:\"Номер убран\","
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": " к выбранному времени\",done:\"Занятие завершено\",times:[\"16:00\",\"17:00\",\"18:00\"],duration:60},pool:{expected:\"Шезлонг и полотенце будут готовы\",done:\"Посещение завершено\",times:[\"16:00\",\"17:00\",\"18:00\"],duration:90},\"early-checkin\":{expected:\"Сообщим, когда номер будет готов\",done:\"Ранний "
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "orm\",\"none\",Le,Re]}],\"transition-behavior\":[{transition:[\"normal\",\"discrete\"]}],duration:[{duration:[$e,\"initial\",Le,Re]}],ease:[{ease:[\"linear\",\"initial\",S,Le,Re]}],delay:[{delay:[$e,Le,Re]}],animate:[{animate:[\"none\",C,Le,Re]}],backface:[{backface:[\"hidden\",\"visible\"]}],perspective:[{pe"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "ull)})]}):null}function ZU({story:e}){const t=Bg(e),a=t[0],r=a.type===\"video\"?a.duration:void 0;return n.jsx(\"span\",{className:\"absolute top-2.5 left-2.5 flex h-5 items-center gap-1 rounded-full bg-stage/40 pr-2 pl-1.5 text-10 font-medium backdrop-blur-md\",children:a.type===\"video\"?n.jsxs"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": ".length?h.map(T=>n.jsx(\"div\",{\"data-message-id\":T.id,className:F(\"scroll-mt-4\",m.animate(T.id)&&\"animate-msg-in\"),children:n.jsx(T4,{message:T,latestResult:T.id===g})},T.id)):n.jsx(TB,{onPrompt:v,children:null}),m.typing&&n.jsx(k4,{})]})}),n.jsx(\"footer\",{className:\"absolute right-4 botto"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": ",children:[h.visible.map((v,w)=>n.jsxs(\"div\",{\"data-message-id\":v.id,className:h.animate(v.id)?\"animate-msg-in\":void 0,children:[y[w]&&n.jsx(\"p\",{className:\"my-4 text-center text-11 font-medium text-muted\",children:y[w]}),n.jsx(T4,{message:v,hotelId:c,staffName:m.staffName,bookingPinned:f"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "opLeft[0])/2,(a.bottomRight[1]-a.topLeft[1])/2]);e.setLocation({center:S,zoom:T,duration:a.duration})}function EE(e,t){const{min:a=0,max:r=21}=e.zoomRange;e.setLocation({zoom:Math.max(a,Math.min(r,e.zoom+t)),duration:250})}function qV({api:e,map:t,coordinates:a,zIndex:r=0,children:l,...c}"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-C4VobzN0.js",
+    "excerpt": "pe:\"button\",\"aria-label\":\"Показать все отели\",onClick:()=>NE(c,e.map(tm),{...wE,duration:300}),className:\"grid size-11 place-items-center rounded-full bg-card shadow-card transition-colors hover:bg-surface\",children:n.jsx(D,{name:\"locate\",className:\"size-5\"})}),n.jsxs(\"div\",{className:\"ov"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".guest-portal-key-loader__float",
+    "declarations": "position:absolute;left:15px;top:19px;width:66px;height:31px;animation:guest-portal-key-float 2.8s ease-in-out infinite"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".guest-portal-key-loader__key",
+    "declarations": "position:relative;width:66px;height:31px;transform-origin:32px 15px;animation:guest-portal-key-sway 2.8s ease-in-out infinite;filter:drop-shadow(0 1px 0 var(--key-edge)) drop-shadow(0 2px 1px color-mix(in srgb,var(--key-edge) 14%,transparent))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".guest-portal-key-loader__shaft:after",
+    "declarations": "content:\"\";position:absolute;inset:-6px auto -6px -14px;width:10px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--key-shine) 60%,transparent),transparent);animation:guest-portal-key-sheen 2.8s ease-in-out infinite"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".guest-portal-key-loader__shadow",
+    "declarations": "position:absolute;left:22px;top:62px;width:54px;height:7px;background:radial-gradient(ellipse,color-mix(in srgb,var(--key-base) 15%,transparent),transparent 72%);border-radius:50%;filter:blur(1.5px);animation:guest-portal-key-shadow 2.8s ease-in-out infinite"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".guest-portal-key-loader__float,.guest-portal-key-loader__key,.guest-portal-key-loader__shadow,.guest-portal-key-loader__shaft:after",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms",
+    "declarations": "--tms-spring: cubic-bezier(.34, 1.45, .64, 1);position:relative;display:inline-flex;flex:none;align-items:center;width:84px;height:28px;border-radius:14px;overflow:hidden;-webkit-user-select:none;user-select:none;touch-action:none;-webkit-tap-highlight-color:transparent;box-shadow:inset 0 0 0 1px #00000014,inset 0 1px 2px #0000002e;transition:transform .12s ease"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-sky",
+    "declarations": "position:absolute;inset:0;opacity:0;transition:opacity .6s ease"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-zone:after",
+    "declarations": "content:\"\";position:absolute;inset:2px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #ffffffb3;opacity:0;transition:opacity .18s ease"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-knob",
+    "declarations": "position:absolute;top:2px;left:2px;z-index:2;width:24px;height:24px;pointer-events:none;transform:translate(calc(var(--tms-i) * 28px));transition:transform .5s var(--tms-spring);will-change:transform"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-knob[data-bump=\"0\"]",
+    "declarations": "animation:tms-jelly-a .5s var(--tms-spring)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-knob[data-bump=\"1\"]",
+    "declarations": "animation:tms-jelly-b .5s var(--tms-spring)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-knob svg",
+    "declarations": "display:block;width:24px;height:24px;overflow:visible;filter:drop-shadow(0 0 3px rgb(220 228 255 / .55));transition:filter .5s ease"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".tms-knob svg *",
+    "declarations": "transition:opacity .4s ease,transform .5s var(--tms-spring)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ":root[data-platform=desktop] .hotel-map .hotel-map-pin[role=button]:not(.is-selected)",
+    "declarations": "transition:background-color .15s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ":root,:host",
+    "declarations": "--font-sans:\"Golos Text Variable\", sans-serif;--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace;--color-black:#000;--color-white:#fff;--spacing:.25rem;--container-4xl:56rem;--text-sm:.875rem;--text-sm--line-height:calc(1.25 / .875);--text-lg:1.125rem;--text-lg--line-height:calc(1.75 / 1.125);--text-xl:1.25rem;--text-xl--line-height:calc(1.75 / 1.25);--font-weight-normal:400;--font-weight-medium:500;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--tracking-normal:0em;--tracking-widest:.1em;--leading-tight:1.25;--leading-snug:1.375;--leading-normal:1.5;--leading-relaxed:1.625;--radius-md:.375rem;--radius-lg:.5rem;--radius-xl:.75rem;--radius-2xl:1rem;--ease-in:cubic-bezier(.4, 0, 1, 1);--ease-out:cubic-bezier(0, 0, .2, 1);--animate-spin:spin 1s linear infinite;--blur-sm:8px;--blur-md:12px;--default-transition-duration:.15s;--default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono);--text-10:calc(10px * var(--text-scale,1));--text-11:calc(11px * var(--text-scale,1));--text-12:calc(12px * var(--text-scale,1));--text-13:calc(13px * var(--text-scale,1));--text-14:calc(14px * var(--text-scale,1));--text-15:calc(15px * var(--text-scale,1));--text-16:calc(16px * var(--text-scale,1));--text-17:calc(17px * var(--text-scale,1));--text-18:calc(18px * var(--text-scale,1));--text-19:calc(19px * var(--text-scale,1));--text-20:calc(20px * var(--text-scale,1));--text-21:calc(21px * var(--text-scale,1));--text-22:calc(22px * var(--text-scale,1));--text-23:calc(23px * var(--text-scale,1));--text-24:calc(24px * var(--text-scale,1));--text-25:calc(25px * var(--text-scale,1));--text-26:calc(26px * var(--text-scale,1));--text-28:calc(28px * var(--text-scale,1));--text-29:calc(29px * var(--text-scale,1));--text-32:calc(32px * var(--text-scale,1));--text-34:calc(34px * var(--text-scale,1));--text-36:calc(36px * var(--text-scale,1));--text-40:calc(40px * var(--text-scale,1));--color-card:#fff;--color-on-brand:#fff;--color-on-photo:#fff;--color-photo-chip:#fff;--color-stage:#000;--color-raise:#fff;--color-ink-1:#41649b;--color-ink-2:#5b7094;--color-ink-3:#617494;--color-ink-4:#6c7b95;--color-ink-5:#7e8aa1;--color-ink-6:#7490b8;--color-ink-7:#7a92c0;--color-ink-8:#91a3bf;--color-ink-9:#9aa6bf;--color-paper:#fbfcfe;--color-mist:#f7f9fd;--color-fill:#f1f4fa;--color-canvas:#edf0f5;--color-shade:#e5e9f2;--color-edge-1:#e6ecf8;--color-edge-2:#dfe5ee;--color-edge-3:#dce4f2;--color-edge-4:#c9d3e6;--color-brand-solid:#2c5deb;--color-brand-dark:#1f47b8;--color-brand-dark-2:#2451cf;--color-brand-hover:#1f47b8;--color-brand-line:#c8d4f3;--color-brand-ring:#bfcffa;--color-brand-tint:#ecf1ff;--color-brand-mist:#e1e9ff;--color-brand-pale:#dce6ff;--color-success:#32714f;--color-success-2:#42785a;--color-success-bg:#edf5ef;--color-warning:#89612e;--color-warning-2:#986c4c;--color-sun:#d99a2b;--color-danger-solid:#b3473b;--color-danger-solid-2:#b65353;--color-alert:#d4353b;--color-night:#14201f;--color-map:#edf1ec;--color-said:#324e7e;--color-meta:#6b80a6;--color-stamp:#7f93b5;--color-hint:#667c9e;--color-idea:#7691c0;--color-note:#7485a2;--color-note-2:#7585a0;--color-lead:#5b75a3;--color-param:#7890b6;--color-step:#7890b4;--color-tab:#77849b;--color-tab-2:#73829b;--color-empty:#9aa4b8;--color-past:#c5ccd9;--color-off:#9aa9c3;--color-off-2:#b7c3d6;--color-off-3:#8a99b5;--color-busy:#a6b0c3;--color-price:#294473;--color-star:#809bd7;--color-soft-2:#ecf1ff;--color-soft-3:#eef3ff;--color-soft-4:#e8eefe;--color-soft-hover:#e5edff;--color-dot:#8ca9e7;--color-typing:#8a9ab5;--color-grab:#d7deea;--color-track:#d6e0fa;--color-track-2:#dfe7fb;--color-dash:#c9d5ea;--color-dash-2:#c9d7fb;--color-chip-line:#dce5fa;--color-edge-hover:#cfd7e4;--color-header-line:#e8ecf4;--color-shade-2:#e5e5ea;--color-toast:#20395a;--color-live:#2fb36b;--color-idle:#c3cad6;--color-success-3:#366451;--color-success-4:#467559;--color-success-5:#37634f;--color-success-7:#4b7d62;--color-success-8:#387456;--color-success-9:#317657;--color-leaf-2:#7f9a8a;--color-warning-3:#946647;--color-warning-4:#955b3e;--color-warning-5:#8f6245;--color-warning-bg:#fff5ee;--color-warning-bg-2:#fff8f1;--color-warning-bg-3:#fbf3ea;--color-warning-bg-4:#fbf3e6;--color-warning-line:#efe2d7;--color-danger-2:#ac5c52;--color-danger-3:#ac6046;--color-danger-4:#a75b47;--color-weekend:#b0603f;--radius-4:4px;--radius-8:8px;--radius-10:10px;--radius-12:12px;--radius-13:13px;--radius-14:14px;--radius-15:15px;--radius-16:16px;--radius-17:17px;--radius-20:20px;--radius-22:22px;--radius-24:24px;--radius-28:28px;--radius-30:30px;--drop-shadow-photo:0 1px 3px #00000073;--ease-soft:cubic-bezier(.22, 1, .36, 1);--ease-ios:cubic-bezier(.32, .72, 0, 1);--ease-spring:cubic-bezier(.34, 1.56, .64, 1);--animate-fade-in:fade-in .24s var(--ease-soft) both;--animate-fade-up:fade-up .36s var(--ease-soft) both;--animate-msg-in:msg-in .32s var(--ease-soft) both;--animate-tab-pop:tab-pop .42s var(--ease-spring) both;--animate-toast-in:toast-in .34s var(--ease-spring) both;--animate-toast-out:toast-out .2s ease-in both;--animate-tab-content:tab-content .26s ease-out both;--color-brand:#2c5deb;--color-ink:#1c2841;--color-muted:#6c7790;--color-line:#e8ecf4;--color-surface:#f5f7fb;--color-soft:#f0f4ff;--color-danger:#b3473b;--radius-card:18px"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".glass-cap",
+    "declarations": "z-index:0;background:#ffffffeb;border-radius:999px;transition:transform .38s cubic-bezier(.2,.8,.2,1),opacity .2s;box-shadow:0 1px 3px #1c28410f"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-fade-in",
+    "declarations": "animation:var(--animate-fade-in)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-fade-up",
+    "declarations": "animation:var(--animate-fade-up)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-msg-in",
+    "declarations": "animation:var(--animate-msg-in)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-spin",
+    "declarations": "animation:var(--animate-spin)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-tab-content",
+    "declarations": "animation:var(--animate-tab-content)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-tab-pop",
+    "declarations": "animation:var(--animate-tab-pop)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-toast-in",
+    "declarations": "animation:var(--animate-toast-in)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".animate-toast-out",
+    "declarations": "animation:var(--animate-toast-out)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition",
+    "declarations": "transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[background-color\\,box-shadow\\]",
+    "declarations": "transition-property:background-color,box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[border-color\\,box-shadow\\,background-color\\,color\\]",
+    "declarations": "transition-property:border-color,box-shadow,background-color,color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[border-color\\,box-shadow\\,background-color\\]",
+    "declarations": "transition-property:border-color,box-shadow,background-color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[border-color\\,box-shadow\\]",
+    "declarations": "transition-property:border-color,box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[bottom\\]",
+    "declarations": "transition-property:bottom;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[color\\,transform\\]",
+    "declarations": "transition-property:color,transform;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[font-size\\,opacity\\]",
+    "declarations": "transition-property:font-size,opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[left\\]",
+    "declarations": "transition-property:left;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[min-height\\]",
+    "declarations": "transition-property:min-height;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[opacity\\,border-color\\]",
+    "declarations": "transition-property:opacity,border-color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[padding\\,margin\\,box-shadow\\,background-color\\]",
+    "declarations": "transition-property:padding,margin,box-shadow,background-color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[rotate\\,color\\]",
+    "declarations": "transition-property:rotate,color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[transform\\,background-color\\]",
+    "declarations": "transition-property:transform,background-color;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[transform\\,box-shadow\\]",
+    "declarations": "transition-property:transform,box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[translate\\,width\\]",
+    "declarations": "transition-property:translate,width;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-\\[width\\]",
+    "declarations": "transition-property:width;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-colors",
+    "declarations": "transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-opacity",
+    "declarations": "transition-property:opacity;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-shadow",
+    "declarations": "transition-property:box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".transition-transform",
+    "declarations": "transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".duration-150",
+    "declarations": "--tw-duration:.15s;transition-duration:.15s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".duration-200",
+    "declarations": "--tw-duration:.2s;transition-duration:.2s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".duration-300",
+    "declarations": "--tw-duration:.3s;transition-duration:.3s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".duration-500",
+    "declarations": "--tw-duration:.5s;transition-duration:.5s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".ease-\\(--ease-soft\\)",
+    "declarations": "--tw-ease:var(--ease-soft);transition-timing-function:var(--ease-soft)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".ease-in",
+    "declarations": "--tw-ease:var(--ease-in);transition-timing-function:var(--ease-in)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".ease-linear",
+    "declarations": "--tw-ease:linear;transition-timing-function:linear"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".ease-out",
+    "declarations": "--tw-ease:var(--ease-out);transition-timing-function:var(--ease-out)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".ease-soft",
+    "declarations": "--tw-ease:var(--ease-soft);transition-timing-function:var(--ease-soft)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".\\[view-transition-name\\:desktop-phone\\]",
+    "declarations": "view-transition-name:desktop-phone"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".\\[view-transition-name\\:desktop-shade\\]",
+    "declarations": "view-transition-name:desktop-shade"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".\\[view-transition-name\\:desktop-sheet\\]",
+    "declarations": "view-transition-name:desktop-sheet"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-reduce\\:animate-none",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-reduce\\:transition-none",
+    "declarations": "transition-property:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".\\[\\&\\>button\\.rounded-full\\]\\:transition-\\[width\\,height\\,background-color\\,box-shadow\\]>button.rounded-full",
+    "declarations": "transition-property:width,height,background-color,box-shadow;transition-timing-function:var(--tw-ease,var(--default-transition-timing-function));transition-duration:var(--tw-duration,var(--default-transition-duration))"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".\\[\\&\\>button\\.rounded-full\\]\\:duration-200>button.rounded-full",
+    "declarations": "--tw-duration:.2s;transition-duration:.2s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "button:not(:disabled,[data-press=off])",
+    "declarations": "transition:scale .22s var(--ease-spring),color .2s ease,background-color .2s ease,border-color .2s ease,box-shadow .2s ease,opacity .2s ease"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "button:not(:disabled,[data-press=off]):active",
+    "declarations": "transition-duration:80ms;scale:.96"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "img[data-loaded]:not(.hotel-map img)",
+    "declarations": "transition:opacity .3s"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-sheet[open]",
+    "declarations": "animation:sheet-up .42s var(--ease-ios)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-sheet[open]::backdrop,.motion-gallery[open]::backdrop",
+    "declarations": "animation:.3s both backdrop-in"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-gallery[open]",
+    "declarations": "animation:gallery-in .32s var(--ease-soft)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".motion-sheet[open]",
+    "declarations": "animation:modal-in .26s var(--ease-soft)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".select-menu",
+    "declarations": "animation:select-in .2s var(--ease-soft)"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".select-menu.origin-bottom",
+    "declarations": "animation-name:select-in-up"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".typing-dot",
+    "declarations": "animation:1.1s ease-in-out infinite typing-dot"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-old(root)",
+    "declarations": "mix-blend-mode:normal;animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-new(root)",
+    "declarations": "mix-blend-mode:normal;animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=forward]::view-transition-old(root)",
+    "declarations": "animation:vt-push-old .44s var(--ease-ios) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=forward]::view-transition-new(root)",
+    "declarations": "animation:vt-push-new .44s var(--ease-ios) both;box-shadow:-10px 0 30px #1c28411f"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=back]::view-transition-old(root)",
+    "declarations": "z-index:1;animation:vt-pop-old .4s var(--ease-ios) both;box-shadow:-10px 0 30px #1c28411f"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=back]::view-transition-new(root)",
+    "declarations": "animation:vt-pop-new .4s var(--ease-ios) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=reveal]::view-transition-new(root)",
+    "declarations": "animation:vt-pop-new .4s var(--ease-ios) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=fade]::view-transition-old(root)",
+    "declarations": "animation:.14s ease-out both vt-fade-out"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=fade]::view-transition-new(root)",
+    "declarations": "animation:vt-fade-in .3s var(--ease-soft) 40ms both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav]::view-transition-old(root)",
+    "declarations": "z-index:0;box-shadow:none;opacity:1;animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav]::view-transition-new(root)",
+    "declarations": "box-shadow:none;animation:vt-opacity-in .26s var(--ease-soft) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-new(desktop-sheet):only-child",
+    "declarations": "animation:vt-sheet-in .42s var(--ease-ios) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-old(desktop-sheet):only-child",
+    "declarations": "animation:vt-sheet-out .3s var(--ease-ios) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-new(desktop-shade):only-child",
+    "declarations": "animation:.3s both backdrop-in"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-old(desktop-shade):only-child",
+    "declarations": "animation:.26s both vt-fade-out"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-new(desktop-phone):only-child",
+    "declarations": "animation:modal-in .3s var(--ease-soft) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "::view-transition-old(desktop-phone):only-child",
+    "declarations": "animation:.2s ease-in both vt-modal-out"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=theme]::view-transition-old(root)",
+    "declarations": "z-index:1;box-shadow:none;animation:vt-fade-out .45s var(--ease-soft) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=theme]::view-transition-new(root)",
+    "declarations": "box-shadow:none;animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=theme]::view-transition-group(*)",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=theme]::view-transition-old(*)",
+    "declarations": "z-index:1;animation:vt-fade-out .45s var(--ease-soft) both"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=theme]::view-transition-new(*)",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=none]::view-transition-old(root)",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "html[data-nav=none]::view-transition-new(root)",
+    "declarations": "animation:none"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": "*,:before,:after,::backdrop",
+    "declarations": "transition-duration:1ms!important;animation-duration:1ms!important;animation-iteration-count:1!important"
+  },
+  {
+    "source": "vendor/arbana/source/assets/index-CB6t6fWP.css",
+    "selector": ".story-progress",
+    "declarations": "animation-duration:8s!important"
+  }
+]
