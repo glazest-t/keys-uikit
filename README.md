@@ -4,6 +4,7 @@
 
 - [Открыть дизайн-систему](https://glazest-t.github.io/keys-uikit/)
 - [Руководство для разработчика и AI-агента](https://glazest-t.github.io/keys-uikit/handoff.html)
+- [Логотип и фавикон](https://glazest-t.github.io/keys-uikit/#brand)
 - [Компоненты](https://glazest-t.github.io/keys-uikit/#components)
 
 ## Состав
@@ -16,6 +17,7 @@
 | `key.css`, `key.js`, `templates.js` | Стили, поведение и HTML-композиции компонентов |
 | `components.json`, `contracts.d.ts` | Состояния, свойства и события |
 | `examples/`, `examples.json` | Отдельные примеры компонентов |
+| `brand/` | Логотипы в SVG, знак ключа, фавиконы SVG / PNG / ICO и правила использования |
 | `icons/`, `icons.svg`, `icons.json` | Иконки |
 | `motion.json`, `motion.inventory.json`, `keyframes.json` | Анимации и переходы |
 | `rendered-reference/` | Скриншоты и точные визуальные образцы |
